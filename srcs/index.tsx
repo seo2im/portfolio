@@ -1,10 +1,15 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React, { Suspense } from 'react'
+import ReactDOM from 'react-dom'
+
+const Main = React.lazy(() => import("./Main"));
 
 const App = () => {
+
 	return (
 		<div>
-			Hello
+			<Suspense fallback={<div>Loading</div>}>
+				<Main/>
+			</Suspense>
 		</div>
 	)
 }
