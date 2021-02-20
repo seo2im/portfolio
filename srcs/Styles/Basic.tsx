@@ -9,15 +9,13 @@ export const Text = styled.p`
 	margin		: ${({ theme }) => theme.margin.zero};
 `
 export const Hdiv = styled.div`
-	display : flex;
+	display 		: flex;
 	flex-direction	: row;
 	
 `
-
 export const HeadWord = styled.span`
 	font-size : ${({ theme }) => theme.fontSize.firstP};
 `
-
 export const Box = styled.div`
 	margin : ${({ theme }) => theme.margin.auto};
 `

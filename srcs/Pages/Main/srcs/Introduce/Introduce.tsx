@@ -1,17 +1,22 @@
 import React from 'react'
 import {
-	Div
+	Div,
+	TextDiv
 } from './Style'
 import {
 	Greeting,
 	Intro
 } from './Article'
+import ArrowButton from './ArrowButton'
 
 const Introduce = () => {
 	return (
 		<Div>
-			{Greeting}
-			{Intro}
+			<TextDiv>
+				{Greeting}
+				{Intro}
+			</TextDiv>
+			<ArrowButton onClick={() => undefined}/>
 		</Div>
 	)
 }

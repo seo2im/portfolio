@@ -17,11 +17,11 @@ const Main = () => {
 		<Div>
 			<Icon src={IconImg} />
 			<Introduce/>
-			
+
 			<SpecBox title={"Web & App"}/>
 			<SpecBox title={"AI"}/>
 			<SpecBox title={"Etc"}/>
-			
+
 			<Hdiv>
 				<ProjectCard />
 				<ProjectCard />
