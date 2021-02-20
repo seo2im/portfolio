@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 import * as Basic from '../../../../Styles/Basic'
 
+export const Div = styled(Basic.Div)`
+	background	: ${({ theme }) => theme.color.orange};
+	text-align	: center;
+	padding		: 6rem 8rem;
+`
+
 export const Text = styled(Basic.Text)`
-	color : ${({ theme }) => theme.color.dark};
+	color : ${({ theme }) => theme.color.white};
 `
 
 export const HeadText = styled(Text)`
@@ -13,14 +19,11 @@ export const HeadText = styled(Text)`
 
 export const Empathize = styled.span`
 	font-weight : bold;
-	color : ${({ theme }) => theme.color.purple};
+	color : ${({ theme }) => theme.color.black};
 `
 
 export const HeadWord = styled(Basic.HeadWord)`
-	color : ${({ theme }) => theme.color.purple};
+
 `
 
-export const Div = styled(Basic.Div)`
-	text-align	: center;
-	padding		: 6rem 8rem;
-`
+

@@ -19,9 +19,13 @@ const theme : DefaultTheme = {
 		indent	: "0 0 0 2rem",
 	},
 	color : {
-		dark	: "#111111",
-		light	: "#EEEEEE",
-		purple	: "#992299",
+		blue		: "#048ABF",
+		yellow		: "#F2CB05",
+		orange		: "#F27F1B",
+		dark		: "#594C3B",
+		deepYellow	: "#F2A30F",
+		white		: "#FFFFFF",
+		black		: "#000000",
 	}
 }
 

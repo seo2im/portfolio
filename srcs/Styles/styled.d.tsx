@@ -20,9 +20,13 @@ declare module 'styled-components' {
 			indent	: string,
 		},
 		color : {
-			dark	: string,
-			light	: string,
-			purple	: string,
+			blue		: string,
+			yellow		: string,
+			orange		: string,
+			dark		: string,
+			deepYellow	: string,
+			white		: string,
+			black		: string,
 		}
 	}
 }

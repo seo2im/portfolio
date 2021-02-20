@@ -10,7 +10,7 @@ module.exports = {
 
 	output : {
 		filename : '[name].bundle.js',
-		path : path.resolve(__dirname, 'dist'),
+		path : path.resolve(__dirname, './dist'),
 	},
 	resolve : {
 		extensions : ['.js','.ts', '.tsx']
@@ -34,6 +34,12 @@ module.exports = {
 						loader : 'ts-loader'
 					}
 				]
+			},
+			{
+				test : /\.(png|jpg)$/i,
+				use : {
+					loader : "url-loader",	
+				},
 			}
 		]
 	},

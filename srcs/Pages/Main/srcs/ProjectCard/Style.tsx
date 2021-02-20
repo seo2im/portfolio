@@ -6,4 +6,5 @@ export const Div = styled(Basic.Box)`
 	height	: 10rem;
 
 	border : 0.1rem solid black;
+	border-radius : 1rem;
 `

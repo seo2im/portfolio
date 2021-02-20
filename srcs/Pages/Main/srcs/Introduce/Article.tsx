@@ -12,4 +12,4 @@ export const Greeting
 
 export const Intro
 =
-<Text><HeadWord>My</HeadWord> name is <Empathize>seongyeon Lim</Empathize>, just call seolim. Being began delveloping with game programming, thorough machine learing engeering, this time make frontend web & app Design. loving to show my projects, works to ohters. Every time think about how to show more specially and artically</Text>
+<Text><HeadWord>My</HeadWord> name is <Empathize>seongyeon Lim</Empathize>, just call <Empathize>seolim</Empathize>. Being began delveloping with <Empathize>game programming</Empathize>, thorough <Empathize>machine learing engeering</Empathize>, this time make <Empathize>frontend web & app Design</Empathize>. loving to show my projects, works to ohters. Every time think about how to show more specially and artically</Text>

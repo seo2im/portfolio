@@ -1,15 +1,13 @@
 import styled from 'styled-components'
 
-export const Text = styled.p`
-	font-size	: ${({ theme }) => theme.fontSize.p};
-	margin		: ${({ theme }) => theme.margin.zero}; 	
-`
-
 export const Div = styled.div`
 	margin	: ${({ theme }) => theme.margin.zero};
 	padding	: ${({ theme }) => theme.padding.zero};
 `
-
+export const Text = styled.p`
+	font-size	: ${({ theme }) => theme.fontSize.p};
+	margin		: ${({ theme }) => theme.margin.zero};
+`
 export const Hdiv = styled.div`
 	display : flex;
 	flex-direction	: row;

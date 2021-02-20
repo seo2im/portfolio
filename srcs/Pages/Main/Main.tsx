@@ -6,19 +6,22 @@ import {
 } from './srcs'
 import {
 	Hdiv,
-	Div
+	Div,
+	Icon
 } from './Style'
+
+import IconImg from '../../Public/profile.png'
 
 const Main = () => {
 	return (
 		<Div>
+			<Icon src={IconImg} />
 			<Introduce/>
-			<Hdiv>
-				<SpecBox title={"Web"}/>
-				<SpecBox title={"AI"}/>
-				<SpecBox title={"App"}/>
-			</Hdiv>
-
+			
+			<SpecBox title={"Web & App"}/>
+			<SpecBox title={"AI"}/>
+			<SpecBox title={"Etc"}/>
+			
 			<Hdiv>
 				<ProjectCard />
 				<ProjectCard />
