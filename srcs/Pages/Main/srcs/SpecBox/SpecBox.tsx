@@ -4,16 +4,14 @@ import {
 } from './Style'
 import Box from './Box'
 import Article from './Article'
-import { useScrollFadeIn } from '../../../../Hooks'
 type Prop = {
 	title	: string,
 }
 
 const SpecBox = ({ title } : Prop) => {
-	const animation = useScrollFadeIn('up', 1, 0);
 
 	return (
-		<Div {...animation}>
+		<Div>
 			<Box border={true}>
 				<Icon src=""/>
 				<HeadText>{title}</HeadText>

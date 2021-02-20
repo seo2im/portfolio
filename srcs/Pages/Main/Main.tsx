@@ -10,11 +10,12 @@ import {
 	SpecDiv,
 	Icon,
 } from './Style'
+import { useScrollFadeIn } from '../../Hooks'
 import IconImg from '../../Public/profile.png'
 
 const Main = () => {
+	const anim = useScrollFadeIn("up", 1, 0);
 	const achorRef = useRef<HTMLDivElement>(null);
-
 	const ScrollToProjectCard = () => {
 		achorRef.current.scrollIntoView({
 			behavior	: "smooth",
@@ -26,11 +27,13 @@ const Main = () => {
 		<Div>
 			<Icon src={IconImg} />
 			<Introduce achor={ScrollToProjectCard}/>
-			<SpecDiv ref={achorRef}>
-				<SpecBox title={"Web & App"}/>
-				<SpecBox title={"AI"}/>
-				<SpecBox title={"Etc"}/>
-			</SpecDiv>
+			<div ref={achorRef}>
+				<SpecDiv {...anim}>
+					<SpecBox title={"Web & App"}/>
+					<SpecBox title={"AI"}/>
+					<SpecBox title={"Etc"}/>
+				</SpecDiv>
+			</div>
 			<Hdiv>
 				<ProjectCard />
 				<ProjectCard />

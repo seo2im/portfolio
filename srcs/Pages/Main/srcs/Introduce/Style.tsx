@@ -16,9 +16,21 @@ export const Div = styled(Basic.Div)`
 	overflow	: auto;
 	background	: ${({ theme }) => theme.gradient.upToDown};
 `
+const Into = keyframes`
+	from {
+		opacity : 0;
+		transform:translateY(-100px);
+	} to {
+		opacity : 1;
+		transform:translateY(0);
+	}
+`
 export const TextDiv = styled.div`
 	margin	: 15rem auto 10rem auto;
+
+	animation : ${Into} 1s forwards;
 `
+
 export const Text = styled(Basic.Text)`
 	max-width : 50rem;
 	min-width : 40rem;

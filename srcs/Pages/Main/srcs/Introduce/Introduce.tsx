@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {
 	Div,
 	TextDiv
@@ -11,6 +11,7 @@ import ArrowButton from './ArrowButton'
 type Prop = {
 	achor : () => void
 }
+
 const Introduce = ({ achor } : Prop) => {
 	return (
 		<Div>
