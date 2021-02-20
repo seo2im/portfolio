@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { 
 	Introduce,
 	SpecBox,
@@ -10,16 +10,15 @@ import {
 	SpecDiv,
 	Icon,
 } from './Style'
-
 import IconImg from '../../Public/profile.png'
 
 const Main = () => {
-	const scrollRef = useRef<HTMLDivElement>(null);
+	const achorRef = useRef<HTMLDivElement>(null);
 
 	const ScrollToProjectCard = () => {
-		scrollRef.current.scrollIntoView({
-			behavior : "smooth",
-			block : "start"
+		achorRef.current.scrollIntoView({
+			behavior	: "smooth",
+			block		: "start"
 		});
 	}
 
@@ -27,7 +26,7 @@ const Main = () => {
 		<Div>
 			<Icon src={IconImg} />
 			<Introduce achor={ScrollToProjectCard}/>
-			<SpecDiv ref={scrollRef}>
+			<SpecDiv ref={achorRef}>
 				<SpecBox title={"Web & App"}/>
 				<SpecBox title={"AI"}/>
 				<SpecBox title={"Etc"}/>

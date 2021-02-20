@@ -1,6 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import * as Basic from '../../../../Styles/Basic'
 
+const Move = keyframes`
+	0% {
+		transform:translateX(500px);
+	} 100% {
+		transform:translateX(0);
+	}
+`
 export const Div = styled(Basic.Hdiv)`
 	max-width	: 70rem;
 	min-height	: 20rem;
