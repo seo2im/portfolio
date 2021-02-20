@@ -4,8 +4,8 @@ const theme : DefaultTheme = {
 	fontSize : {
 		header	: "50rem",
 		title	: "30rem",
-		firstP	: "15rem",
-		p		: "20rem",
+		firstP	: "3rem",
+		p		: "1.5rem",
 	},
 	margin : {
 		zero	: "0",

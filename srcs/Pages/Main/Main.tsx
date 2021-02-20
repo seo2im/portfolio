@@ -1,15 +1,30 @@
-import React, { Suspense } from 'react'
-
-import { Introduce } from './srcs'
+import React from 'react'
+import { 
+	Introduce,
+	SpecBox,
+	ProjectCard
+} from './srcs'
+import {
+	Hdiv,
+	Div
+} from './Style'
 
 const Main = () => {
 	return (
-		<div>
-			<Suspense fallback={<div>Hmm</div>}>
-				Main
-				<Introduce/>
-			</Suspense>
-		</div>
+		<Div>
+			<Introduce/>
+			<Hdiv>
+				<SpecBox title={"Web"}/>
+				<SpecBox title={"AI"}/>
+				<SpecBox title={"App"}/>
+			</Hdiv>
+
+			<Hdiv>
+				<ProjectCard />
+				<ProjectCard />
+				<ProjectCard />
+			</Hdiv>
+		</Div>
 	)
 }
 

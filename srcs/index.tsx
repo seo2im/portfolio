@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components'
 
 const Main = React.lazy(() => import("./Pages/Main/Main"));
 
-
 const App = () => {
 
 	return (

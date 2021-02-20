@@ -1,11 +1,18 @@
 import React from 'react'
-import { Text } from './Style'
+import {
+	Div
+} from './Style'
+import {
+	Greeting,
+	Intro
+} from './Article'
 
 const Introduce = () => {
 	return (
-		<div>
-			<Text>Hi</Text>
-		</div>
+		<Div>
+			{Greeting}
+			{Intro}
+		</Div>
 	)
 }
 
