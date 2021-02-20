@@ -5,6 +5,9 @@ export const Div = styled(Basic.Div)`
 	background : ${({ theme }) => theme.color.darkGrey};
 	text-align : center;
 `
+export const SpecDiv = styled(Div)`
+	padding	: 1.5rem;
+`
 export const Hdiv = styled(Basic.Hdiv)`
 	width			: 100%;
 	justify-content : space-between;

@@ -3,6 +3,14 @@ import * as Basic from '../../../../Styles/Basic'
 /*
 	introduce
 */
+const upMove = keyframes`
+	0% {
+		transform : translate(0, 0);
+	}
+	100% {
+		transform : translate(0, -5px);
+	}
+`
 export const Div = styled(Basic.Div)`	
 	text-align	: center;
 	overflow	: auto;
@@ -17,18 +25,25 @@ export const Text = styled(Basic.Text)`
 	margin : 0.7rem auto;
 	color : ${({ theme }) => theme.color.lightGrey};
 `
-
 export const HeadText = styled(Text)`
+	color : ${({ theme }) => theme.color.white};
 	font-size : 2.5rem;
 	font-weight : bold;
-	margin-bottom : 1rem;
-`
+	margin-bottom : 1.5rem;
 
+	&:hover {
+		animation : ${upMove} 0.3s forwards;
+	}
+`
 export const Empathize = styled.span`
+	display : inline-block;
 	font-weight : bold;
 	color : ${({ theme }) => theme.color.white};
-`
 
+	&:hover {
+		animation : ${upMove} 0.3s forwards;
+	}
+`
 export const HeadWord = styled(Basic.HeadWord)`
 
 `
@@ -56,8 +71,6 @@ export const ButtonDiv = styled.button`
 	&:hover {
 		animation: ${arrowMove} 0.3s linear 0s infinite alternate; margin-top: 0;
 	};
-	
-	
 `
 export const Arrow = styled.div<{position : string[]}>`
 	position : relative;

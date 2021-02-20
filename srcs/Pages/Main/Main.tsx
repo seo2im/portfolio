@@ -1,27 +1,37 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { 
 	Introduce,
 	SpecBox,
-	ProjectCard
+	ProjectCard,
 } from './srcs'
 import {
 	Hdiv,
 	Div,
-	Icon
+	SpecDiv,
+	Icon,
 } from './Style'
 
 import IconImg from '../../Public/profile.png'
 
 const Main = () => {
+	const scrollRef = useRef<HTMLDivElement>(null);
+
+	const ScrollToProjectCard = () => {
+		scrollRef.current.scrollIntoView({
+			behavior : "smooth",
+			block : "start"
+		});
+	}
+
 	return (
 		<Div>
 			<Icon src={IconImg} />
-			<Introduce/>
-
-			<SpecBox title={"Web & App"}/>
-			<SpecBox title={"AI"}/>
-			<SpecBox title={"Etc"}/>
-
+			<Introduce achor={ScrollToProjectCard}/>
+			<SpecDiv ref={scrollRef}>
+				<SpecBox title={"Web & App"}/>
+				<SpecBox title={"AI"}/>
+				<SpecBox title={"Etc"}/>
+			</SpecDiv>
 			<Hdiv>
 				<ProjectCard />
 				<ProjectCard />

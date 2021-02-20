@@ -8,15 +8,17 @@ import {
 	Intro
 } from './Article'
 import ArrowButton from './ArrowButton'
-
-const Introduce = () => {
+type Prop = {
+	achor : () => void
+}
+const Introduce = ({ achor } : Prop) => {
 	return (
 		<Div>
 			<TextDiv>
 				{Greeting}
 				{Intro}
 			</TextDiv>
-			<ArrowButton onClick={() => undefined}/>
+			<ArrowButton onClick={achor}/>
 		</Div>
 	)
 }

@@ -6,7 +6,7 @@ import Box from './Box'
 import Article from './Article'
 
 type Prop = {
-	title		: string,
+	title	: string,
 }
 
 const SpecBox = ({ title } : Prop) => {
