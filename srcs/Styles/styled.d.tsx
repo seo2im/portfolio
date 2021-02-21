@@ -24,7 +24,8 @@ declare module 'styled-components' {
 			darkGrey	: string,
 			grey		: string,
 			lightGrey	: string,
-			white		: string
+			white		: string,
+			red 		: string,
 		},
 		gradient : {
 			upToDown	: string,

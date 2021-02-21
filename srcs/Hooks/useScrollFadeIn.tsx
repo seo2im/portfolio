@@ -33,6 +33,7 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
 			current.style.transform = 'translate3d(0, 0, 0)';
     	}
 	}, [delay, duration]);
+	/*
 	const outScroll = useCallback(([entry]) => {
 		const { current } = element;
 		
@@ -40,21 +41,21 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0) => {
 			current.style.transform = 'translate3d(0, 50%, 0)';
     
 	}, []);
-
+	*/
 
 	useEffect(() => {
 		let inObserver;
-		let outObserver;
+		//let outObserver;
 
 		if (element.current) {
 			inObserver = new IntersectionObserver(onScroll, { threshold: 0.1 });
 			inObserver.observe(element.current);
 	  
-			outObserver = new IntersectionObserver(outScroll, { threshold: 0 });
-			outObserver.observe(element.current);
+			//outObserver = new IntersectionObserver(outScroll, { threshold: 0 });
+			//outObserver.observe(element.current);
     }
 
-    return () => inObserver && inObserver.disconnect() && outObserver && outObserver.disconnect();
+    return () => inObserver && inObserver.disconnect() //&& outObserver && outObserver.disconnect();
   }, [onScroll]);
 
   return {

@@ -2,8 +2,8 @@ import { DefaultTheme } from 'styled-components'
 
 const theme : DefaultTheme = {
 	fontSize : {
-		header	: "50rem",
-		title	: "30rem",
+		header	: "10rem",
+		title	: "6rem",
 		firstP	: "3rem",
 		p		: "1.5rem",
 	},
@@ -24,6 +24,7 @@ const theme : DefaultTheme = {
 		grey		: "#737373",
 		lightGrey	: "#BFBFBF",
 		white		: "#F2F2F2",
+		red			: "#da3f3a"
 	},
 	gradient : {
 		upToDown	: "linear-gradient(#000000, #404040)"

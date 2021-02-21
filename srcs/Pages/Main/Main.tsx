@@ -1,20 +1,16 @@
 import React, { useRef, useEffect } from 'react'
 import { 
 	Introduce,
-	SpecBox,
-	ProjectCard,
+	Spec,
 } from './srcs'
 import {
-	Hdiv,
 	Div,
-	SpecDiv,
 	Icon,
 } from './Style'
-import { useScrollFadeIn } from '../../Hooks'
-import IconImg from '../../Public/profile.png'
+import { profile } from '../../Public'
 
 const Main = () => {
-	const anim = useScrollFadeIn("up", 1, 0);
+	
 	const achorRef = useRef<HTMLDivElement>(null);
 	const ScrollToProjectCard = () => {
 		achorRef.current.scrollIntoView({
@@ -25,20 +21,11 @@ const Main = () => {
 
 	return (
 		<Div>
-			<Icon src={IconImg} />
+			<Icon src={profile} />
 			<Introduce achor={ScrollToProjectCard}/>
 			<div ref={achorRef}>
-				<SpecDiv {...anim}>
-					<SpecBox title={"Web & App"}/>
-					<SpecBox title={"AI"}/>
-					<SpecBox title={"Etc"}/>
-				</SpecDiv>
+				<Spec />
 			</div>
-			<Hdiv>
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-			</Hdiv>
 		</Div>
 	)
 }

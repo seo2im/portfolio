@@ -3,14 +3,6 @@ import * as Basic from '../../../../Styles/Basic'
 /*
 	introduce
 */
-const upMove = keyframes`
-	0% {
-		transform : translate(0, 0);
-	}
-	100% {
-		transform : translate(0, -5px);
-	}
-`
 export const Div = styled(Basic.Div)`	
 	text-align	: center;
 	overflow	: auto;
@@ -27,8 +19,6 @@ const Into = keyframes`
 `
 export const TextDiv = styled.div`
 	margin	: 15rem auto 10rem auto;
-
-	animation : ${Into} 1s forwards;
 `
 
 export const Text = styled(Basic.Text)`
@@ -36,25 +26,20 @@ export const Text = styled(Basic.Text)`
 	min-width : 40rem;
 	margin : 0.7rem auto;
 	color : ${({ theme }) => theme.color.lightGrey};
+	opacity : 0;
+
+	animation : ${Into} 0.5s 0.5s forwards;
 `
 export const HeadText = styled(Text)`
-	color : ${({ theme }) => theme.color.white};
-	font-size : 2.5rem;
+	color : ${({ theme }) => theme.color.red};
+	font-size : ${({ theme }) => theme.fontSize.firstP};
 	font-weight : bold;
 	margin-bottom : 1.5rem;
 
-	&:hover {
-		animation : ${upMove} 0.3s forwards;
-	}
+	animation : ${Into} 0.5s 0s forwards;
 `
-export const Empathize = styled.span`
-	display : inline-block;
-	font-weight : bold;
-	color : ${({ theme }) => theme.color.white};
+export const Empathize = styled(Basic.Empathize)`
 
-	&:hover {
-		animation : ${upMove} 0.3s forwards;
-	}
 `
 export const HeadWord = styled(Basic.HeadWord)`
 
