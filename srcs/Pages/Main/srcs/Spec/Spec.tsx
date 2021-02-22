@@ -20,9 +20,9 @@ const Spec = () => {
 
 	return (
 		<Div>
-			<HeadText {...animStart}>What Am I DO ?</HeadText>
+			<HeadText {...animStart}>What Can I DO ?</HeadText>
 			<Text>Learing <Empathize>Frontend Web & APP</Empathize></Text>
-			<Text>Work  <Empathize>AI system</Empathize></Text>
+			<Text>Work <Empathize>AI system</Empathize></Text>
 			<Text mBottom={"2rem"}>Make Some <Empathize>graphic applications</Empathize></Text>
 			<HView {...animSecond}>
 				{section.map((name, i) => (

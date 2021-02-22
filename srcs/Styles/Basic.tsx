@@ -1,5 +1,15 @@
 import styled, { keyframes } from 'styled-components'
 
+const upMove = `
+	transform	: translate(0, 0);
+	transition	: transform 0.5s;
+	&:hover {
+		transform	: translate(0, -5px);
+	}
+`
+export const anim = {
+	upMove
+}
 export const Div = styled.div`
 	margin	: ${({ theme }) => theme.margin.zero};
 	padding	: ${({ theme }) => theme.padding.zero};
@@ -20,20 +30,10 @@ export const HeadWord = styled.span`
 export const Box = styled.div`
 	margin : ${({ theme }) => theme.margin.auto};
 `
-export const upMove = keyframes`
-	0% {
-		transform : translate(0, 0);
-	}
-	100% {
-		transform : translate(0, -5px);
-	}
-`
 export const Empathize = styled.span`
 	display : inline-block;
 	font-weight : bold;
 	color : ${({ theme }) => theme.color.red};
 
-	&:hover {
-		animation : ${upMove} 0.3s forwards;
-	}
+	${upMove}
 `

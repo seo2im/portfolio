@@ -27,45 +27,92 @@ export const HView = styled(Basic.Hdiv)`
 	margin-bottom : 1rem;
 `
 export const Button = styled.button<{ active : boolean}>`
-	font-size	: 1rem;
+	font-size	: ${({ active, theme }) => active ? "1.8rem" : "1rem"};
 	font-weight	: bold;
-	color		: ${({ theme }) => theme.color.lightGrey};
+	color		: ${({ active, theme }) => active ? theme.color.red : theme.color.lightGrey};
 	
-	min-width		: 10rem;
+	min-width		: 7rem;
 	margin-right	: 1rem;
-	padding			: 0.5rem 0;
+	padding			: 1rem 0;
 	
-	background		: ${({ active, theme }) => active ? theme.color.black : theme.color.darkGrey};;
+	background		: ${({ active, theme }) => active ? theme.color.black : theme.color.darkGrey};
 	border			: 0.1rem solid black;
 	border-radius	: 0.4rem;
 
 	box-shadow		: 2px 2px 2px black;
-
 	&:focus {
 		outline : none;
 	}
-	&:hover {
-		animation : ${Basic.upMove} 0.3s forwards;
-	}
+
+	${Basic.anim.upMove}
 `
 /*
 	SpecBox
 */
 export const SpecBoxDiv = styled(Basic.Div)`
-	background-color : white;
+	
+`
+export const OutlineBox = styled(Basic.Div)`
+	background		: ${({ theme }) => theme.color.darkGrey};	
+	border			: 0.1rem solid black;
+	border-radius	: 0.4rem;
+	box-shadow		: 2px 2px 2px black;
+
+	padding	: 1rem 1rem;
+	margin	: 1rem 0;
+`
+export const SpecHdiv = styled(HView)`
+	justify-content	: center;
 `
 export const SpecHeadText = styled(Basic.Text)`
-	margin		: 2rem 0;
+	margin		: 0 0 2rem 0;
 	font-size	: 2rem;
 	font-weight	: bold;
+	color		: ${({ theme }) => theme.color.red};
 `
-export const ImgDiv = styled.div<{background : any}>`
-	width	: 5rem;
-	height	: 5rem;
+export const SpecText = styled(Basic.Text)`
+	font-size	: 1.3rem;
+	line-height	: 2rem;
+	
+	margin	: 2rem 0 3rem 0;
+`
+export const ToolCard = styled(Basic.Div)<{background : any}>`
+	width	: 7rem;
+	height	: 7rem;
 
-	margin-right	: 2rem;
+	margin			: auto 0;
+	margin-right	: 1rem;
 	
 	background			: url(${({ background }) => background}) no-repeat;
 	background-size 	: contain;
 	background-position : center;
+`
+export const ProjectCard = styled(Basic.Div)<{background : any}>`
+	position	: relative;
+
+	width	: 15rem;
+	height	: 8rem;
+
+	margin-right	: 2rem;
+
+	background			: url(${({ background }) => background}) no-repeat;
+	background-size 	: contain;
+	background-position : center;
+`
+export const Remark = styled.div`
+	transform : rotate(-45deg);
+	
+	position	: relative;
+	top			: 0;
+	left		: -25px;
+
+	width: 60px;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid black;
+`
+export const RemarkText = styled(Basic.Text)`
+	color	: white;
+	line-height	: 25px;
 `

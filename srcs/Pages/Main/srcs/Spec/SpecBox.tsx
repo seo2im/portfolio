@@ -1,14 +1,17 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import {
 	SpecBoxDiv,
-	Text,
-	HView,
-	ImgDiv,
-	HeadText,
-	SpecHeadText
+	SpecHdiv,
+	SpecHeadText,
+	ToolCard,
+	ProjectCard,
+	OutlineBox,
+	Remark,
+	RemarkText
 } from './Style'
 import Article from './Article'
 import { useFadeIn } from '../../../../Hooks'
+
 type Prop = {
 	name : string
 }
@@ -19,21 +22,27 @@ const SpecBox = ({ name } : Prop) => {
 	
 	return (
 		<SpecBoxDiv {...anim}>
-			<Text>{description}</Text>
-			<SpecHeadText>TOOL</SpecHeadText>
-			<HView>
-				{tools.map(({name, url}, i) => (
-					<ImgDiv key={`tool_${i}`} background={url} />
-				))}
-			</HView>
-			<SpecHeadText>PROJECT</SpecHeadText>
-			<HView>
-				{projects.map(({name ,url}, i) => (
-					<ImgDiv key={`project_${i}`} background={url}>
-						<Text>{name}</Text>
-					</ImgDiv>
-				))}
-			</HView>
+			{description}
+			<OutlineBox>
+				<SpecHeadText>TOOL</SpecHeadText>
+				<SpecHdiv>
+					{tools.map(({name, url}, i) => (
+						<ToolCard key={`tool_${i}`} background={url}/>	
+					))}
+				</SpecHdiv>
+			</OutlineBox>
+			<OutlineBox>
+				<SpecHeadText>PROJECT & STUDY</SpecHeadText>
+				<SpecHdiv>
+					{projects.map(({name ,url}, i) => (
+						<ProjectCard key={`project_${i}`} background={url}>
+							<Remark>
+								<RemarkText>Test</RemarkText>
+							</Remark>
+						</ProjectCard>
+					))}
+				</SpecHdiv>
+			</OutlineBox>
 		</SpecBoxDiv>
 	)
 }
