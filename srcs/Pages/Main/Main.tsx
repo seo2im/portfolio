@@ -18,11 +18,12 @@ const Main = () => {
 			block		: "start"
 		});
 	}
-
+	//<Icon src={profile} />
+	//<Introduce achor={ScrollToProjectCard}/>
 	return (
 		<Div>
-			<Icon src={profile} />
-			<Introduce achor={ScrollToProjectCard}/>
+			
+			
 			<div ref={achorRef}>
 				<Spec />
 			</div>

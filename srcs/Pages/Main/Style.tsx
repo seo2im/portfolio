@@ -12,8 +12,8 @@ export const Hdiv = styled(Basic.Hdiv)`
 `
 export const Icon = styled.img`
 	position	: absolute;
-	top			: 1rem;
-	left		: 0.5rem;
+	top			: 2rem;
+	left		: 2rem;
 	background	: white;
 
 	width			: 8rem;

@@ -3,13 +3,6 @@ import * as Basic from '../../../../Styles/Basic'
 /*
 	Spec
 */
-const Appear = keyframes`
-	from {
-		opacity : 0;
-	} to {
-		opacity : 1;
-	}
-`
 export const Div = styled(Basic.Div)`
 	max-width	: 70rem;
 	min-height	: 70rem;
@@ -17,32 +10,36 @@ export const Div = styled(Basic.Div)`
 	padding		: 4rem;
 	margin		: 0 auto;
 `
-export const Text = styled(Basic.Text)`
-
+export const Text = styled(Basic.Text)<{mBottom? : string}>`
+	margin-bottom : ${({ mBottom }) => mBottom? mBottom : "0.5rem"};
 `
 export const Empathize = styled(Basic.Empathize)`
 
 `
 export const HeadText = styled(Text)`
-	font-size	: ${({ theme }) => theme.fontSize.firstP};
+	font-size	: 4rem;
 	color		: ${({ theme }) => theme.color.red};
 	font-weight	: bold;
 
-	margin-bottom : 3rem;
+	margin-bottom : 1rem;
 `
 export const HView = styled(Basic.Hdiv)`
-	margin-bottom : 2rem;
+	margin-bottom : 1rem;
 `
 export const Button = styled.button<{ active : boolean}>`
-	font-size	: ${({ active, theme }) => active ? theme.fontSize.firstP : theme.fontSize.p};
+	font-size	: 1rem;
 	font-weight	: bold;
-	color		: ${({ active, theme }) => active ? theme.color.red : theme.color.lightGrey};
+	color		: ${({ theme }) => theme.color.lightGrey};
 	
-	min-width	: 10rem;
-	text-align	: left;
+	min-width		: 10rem;
+	margin-right	: 1rem;
+	padding			: 0.5rem 0;
 	
-	background	: rgba(0, 0, 0, 0);
-	border		: 0rem;
+	background		: ${({ active, theme }) => active ? theme.color.black : theme.color.darkGrey};;
+	border			: 0.1rem solid black;
+	border-radius	: 0.4rem;
+
+	box-shadow		: 2px 2px 2px black;
 
 	&:focus {
 		outline : none;
@@ -55,11 +52,20 @@ export const Button = styled.button<{ active : boolean}>`
 	SpecBox
 */
 export const SpecBoxDiv = styled(Basic.Div)`
-	padding-left	: 3rem; 
+	background-color : white;
+`
+export const SpecHeadText = styled(Basic.Text)`
+	margin		: 2rem 0;
+	font-size	: 2rem;
+	font-weight	: bold;
 `
 export const ImgDiv = styled.div<{background : any}>`
-	width	: 10rem;
-	height	: 10rem;
+	width	: 5rem;
+	height	: 5rem;
+
+	margin-right	: 2rem;
 	
-	background	: url(${({ background }) => background}) no-repeat;
+	background			: url(${({ background }) => background}) no-repeat;
+	background-size 	: contain;
+	background-position : center;
 `
