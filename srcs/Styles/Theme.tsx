@@ -2,8 +2,8 @@ import { DefaultTheme } from 'styled-components'
 
 const theme : DefaultTheme = {
 	fontSize : {
-		header	: "10rem",
-		title	: "6rem",
+		header	: "15rem",
+		title	: "10rem",
 		firstP	: "3rem",
 		p		: "1.5rem",
 	},

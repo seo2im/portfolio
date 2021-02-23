@@ -2,6 +2,7 @@ import React from 'react'
 import {
 	SpecBoxDiv,
 	SpecHdiv,
+	PostHdiv,
 	SpecHeadText,
 	ToolCard,
 	ProjectCard,
@@ -34,7 +35,7 @@ const SpecBox = ({ name } : Prop) => {
 			</OutlineBox>
 			<OutlineBox>
 				<SpecHeadText>PROJECT & STUDY</SpecHeadText>
-				<SpecHdiv>
+				<PostHdiv>
 					{projects.map(({key, name ,url}, i) => (
 						<Go key={`project_${i}`} to={`/project/${name}`}>
 							<ProjectCard background={url}>
@@ -44,7 +45,7 @@ const SpecBox = ({ name } : Prop) => {
 							</ProjectCard>
 						</Go>
 					))}
-				</SpecHdiv>
+				</PostHdiv>
 			</OutlineBox>
 		</SpecBoxDiv>
 	)

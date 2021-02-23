@@ -64,6 +64,11 @@ export const OutlineBox = styled(Basic.Div)`
 `
 export const SpecHdiv = styled(HView)`
 	justify-content	: center;
+	
+`
+export const PostHdiv  = styled(HView)`
+	margin	: 0 auto;
+	flex-wrap	: wrap;
 `
 export const SpecHeadText = styled(Basic.Text)`
 	margin		: 0 0 2rem 0;
@@ -94,7 +99,7 @@ export const ProjectCard = styled(Basic.Div)<{background : any}>`
 	width	: 15rem;
 	height	: 8rem;
 
-	margin-right	: 2rem;
+	margin	: 0 2rem 2rem 0;
 
 	background			: url(${({ background }) => background}) no-repeat;
 	background-size 	: 100% 100%;

@@ -3,6 +3,7 @@ import {
 	Div,
 	Title,
 	Description,
+	Header,
 	Photo,
 	About
 } from './Style'
@@ -13,9 +14,11 @@ const Project = ({ match }) => {
 
 	return (
 		<Div>
-			<Title>{post.title}</Title>
-			<Description>{post.description}</Description>
-			<Photo src={post.img}/>
+			<Header>
+				<Title>{post.title}</Title>
+				<Description>{post.description}</Description>
+				<Photo src={post.img}/>
+			</Header>
 			<About dangerouslySetInnerHTML={{__html : post.html}} />
 		</Div>
 	)
