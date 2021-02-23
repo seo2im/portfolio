@@ -10,7 +10,7 @@ const Project = React.lazy(() => import("./Pages/Project/Project"));
 const App = () => {
 
 	return (
-		<Router>
+		<Router basename="/portfolio">
 			<Suspense fallback={<div>Loading</div>}>
 				<ThemeProvider theme={theme}>
 					<Switch>
