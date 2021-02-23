@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import * as Basic from '../../../../Styles/Basic'
+import { Link } from "react-router-dom"
 /*
 	Spec
 */
@@ -96,23 +97,27 @@ export const ProjectCard = styled(Basic.Div)<{background : any}>`
 	margin-right	: 2rem;
 
 	background			: url(${({ background }) => background}) no-repeat;
-	background-size 	: contain;
+	background-size 	: 100% 100%;
 	background-position : center;
 `
 export const Remark = styled.div`
-	transform : rotate(-45deg);
+	transform	: rotate(-45deg);
 	
 	position	: relative;
 	top			: 0;
 	left		: -25px;
 
-	width: 60px;
+	width: 35px;
     height: 0;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     border-bottom: 25px solid black;
 `
 export const RemarkText = styled(Basic.Text)`
-	color	: white;
+	font-size	: 0.8rem;
+	color		: white;
 	line-height	: 25px;
+`
+export const Go = styled(Link)`
+	
 `

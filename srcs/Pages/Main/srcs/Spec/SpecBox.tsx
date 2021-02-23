@@ -7,7 +7,8 @@ import {
 	ProjectCard,
 	OutlineBox,
 	Remark,
-	RemarkText
+	RemarkText,
+	Go
 } from './Style'
 import Article from './Article'
 import { useFadeIn } from '../../../../Hooks'
@@ -34,12 +35,14 @@ const SpecBox = ({ name } : Prop) => {
 			<OutlineBox>
 				<SpecHeadText>PROJECT & STUDY</SpecHeadText>
 				<SpecHdiv>
-					{projects.map(({name ,url}, i) => (
-						<ProjectCard key={`project_${i}`} background={url}>
-							<Remark>
-								<RemarkText>Test</RemarkText>
-							</Remark>
-						</ProjectCard>
+					{projects.map(({key, name ,url}, i) => (
+						<Go key={`project_${i}`} to={`/project/${name}`}>
+							<ProjectCard background={url}>
+								<Remark>
+									<RemarkText>{key}</RemarkText>
+								</Remark>
+							</ProjectCard>
+						</Go>
 					))}
 				</SpecHdiv>
 			</OutlineBox>

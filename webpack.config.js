@@ -40,6 +40,12 @@ module.exports = {
 				use : {
 					loader : "url-loader",	
 				},
+			},
+			{
+				test : /\.html$/i,
+				use : {
+					loader : 'html-loader'
+				}
 			}
 		]
 	},
