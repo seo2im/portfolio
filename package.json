@@ -7,6 +7,7 @@
     "start": "webpack serve --hot",
     "build": "webpack --mode production"
   },
+  "homepage": "https://seo2im.github.io/portfolio",
   "author": "",
   "license": "ISC",
   "dependencies": {
