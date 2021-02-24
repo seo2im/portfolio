@@ -102,7 +102,7 @@ export const ProjectCard = styled(Basic.Div)<{background : any}>`
 	margin	: 0 2rem 2rem 0;
 
 	background			: url(${({ background }) => background}) no-repeat;
-	background-size 	: 100% 100%;
+	background-size 	: cover;
 	background-position : center;
 `
 export const Remark = styled.div`

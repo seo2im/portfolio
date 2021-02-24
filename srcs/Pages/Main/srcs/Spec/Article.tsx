@@ -31,9 +31,9 @@ const APP : Article = {
 	tools		: [{name : "React Native", url : url.reactNative},
 					{name : "JS", url : url.js},
 					{name : "CSS", url : url.css}],/*["React Native", "JS"],*/
-	projects	: [{key : "Project", name : "BL:ER APP", url : url.bler},
-					{key : "Project", name : "Account APP", url : url.account},
-					{key : "Project", name : "Todo APP", url : url.todo}],/*["Todo App", "Account App", "BL:ER App"]*/
+	projects	: [{key : "Project", name : "BLER", url : url.bler},
+					{key : "Project", name : "Account", url : url.account},
+					{key : "Project", name : "Todo", url : url.todo}],/*["Todo App", "Account App", "BL:ER App"]*/
 }
 const AI : Article = {
 	title		: "AI",

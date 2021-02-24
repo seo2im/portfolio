@@ -25,7 +25,7 @@ export const Photo = styled.img`
 	display	: block;
 	width	: 60rem;
 	margin	: 0 auto;
-	border	: 0.01rem solid black;
+	
 `
 export const About = styled(Basic.Div)`
 	
