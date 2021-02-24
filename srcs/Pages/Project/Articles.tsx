@@ -11,13 +11,27 @@ type Post = {
 	html		: any,
 }
 
-const PortfolioPage : Post = {
-	title		: "portfolio Page",
-	description	: "description test",
-	img			: posts.PortfolioPage.img,
-	html		: posts.PortfolioPage.html
+const Portfolio : Post = {
+	title		: "portfolio",
+	description	: "Show my introduce",
+	img			: posts.Portfolio.img,
+	html		: posts.Portfolio.html
+}
+const Boostcamp : Post = {
+	title		: "Boost Camp",
+	description	: "My first time of frontEnd",
+	img			: posts.Boostcamp.img,
+	html		: posts.Boostcamp.html
+}
+const Blog : Post = {
+	title		: "42 BLOG",
+	description	: "React simple web page project",
+	img			: posts.Blog.img,
+	html		: posts.Blog.html
 }
 
 export default {
-	PortfolioPage
+	Portfolio,
+	Boostcamp,
+	Blog
 }

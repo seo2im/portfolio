@@ -33,7 +33,7 @@ export const Text = styled(Basic.Text)`
 export const HeadText = styled(Text)`
 	color : ${({ theme }) => theme.color.red};
 	font-size : ${({ theme }) => theme.fontSize.firstP};
-	font-weight : bold;
+	font-weight : 900;
 	margin-bottom : 1.5rem;
 
 	animation : ${Into} 0.5s 0s forwards;

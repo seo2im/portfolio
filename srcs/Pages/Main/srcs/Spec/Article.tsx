@@ -21,9 +21,9 @@ const WEB : Article = {
 					{name : "Node", url : url.node},
 					{name : "express", url : url.express},
 					{name : "Css", url : url.css}],/*["React", "JS", "Node", "Css", "Express", "GQL"],*/
-	projects	: [{key : "Study", name : "Boost Course", url : url.boostcourse},
-					{key : "Project", name : "React Blog", url : url.blog},
-					{key : "Project", name : "PortfolioPage", url : url.portfolio}]
+	projects	: [{key : "Study", name : "Boostcamp", url : url.boostcourse},
+					{key : "Project", name : "Blog", url : url.blog},
+					{key : "Project", name : "Portfolio", url : url.portfolio}]
 }
 const APP : Article = {
 	title		: "APP",
