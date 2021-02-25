@@ -43,16 +43,15 @@ const AI : Article = {
 					{name : "Python", url : url.python},
 					{name : 'pandas', url : url.pandas},
 					{name : "sklearn", url : url.sklearn}],/*["Tensorflow", "keras", "sklean", "pandas", "Python"],*/
-	projects	: [{key : "Study", name : "42 Seoul", url : url.fortyTwo},
-					{key: "Study", name : "Boost Course", url : url.boostcourse}],/*["AutoDrivingCar with Reinforce learing", "Naver D2 : ", "Recognition of disease with 3d RNN"]*/
+	projects	: [{key : "project", name : "DQRN", url : url.fortyTwo},
+					{key: "project", name : "Hospital", url : url.boostcourse}],/*["AutoDrivingCar with Reinforce learing", "Naver D2 : ", "Recognition of disease with 3d RNN"]*/
 }
 const ETC : Article = {
 	title		: "ETC",
 	description	: (<SpecText>I study not only AI & FrontEnd, but also <Empathize>Game programing, Motion Graphic</Empathize>. This time, I do various things not only programing, <Empathize>but also all of things for developing</Empathize></SpecText>),
 	tools		: [{name : "unity", url : url.unity},
 					{name : "after effect", url : url.afterEffect}],/*["Unity", "C", "Linux"],*/
-	projects	: [{key : "Study", name : "42 Seoul", url : url.fortyTwo},
-					{key : "Study", name : "Boost Course", url : url.boostcourse}],/*["Unity Auto Car", "42 education", "Naver boost Course", "Game : Sabotazu"]*/
+	projects	: [{key : "project", name : "Sabotazu", url : url.fortyTwo}],/*["Unity Auto Car", "42 education", "Naver boost Course", "Game : Sabotazu"]*/
 }
 
 export default  {

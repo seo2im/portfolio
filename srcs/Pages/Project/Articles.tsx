@@ -47,12 +47,32 @@ const Todo : Post = {
 	img			: posts.Todo.img,
 	html		: posts.Todo.html
 }
-
+const DQRN : Post = {
+	title		: "AutoCar by DQRN",
+	description	: "Only DQN, no others",
+	img			: posts.DQRN.img,
+	html		: posts.DQRN.html
+}
+const Hospital : Post = {
+	title		: "Illness Recognition",
+	description	: "AI get illness, you cured",
+	img			: posts.Hospital.img,
+	html		: posts.Hospital.html
+}
+const Sabotazu : Post = {
+	title		: "Sabotazu",
+	description	: "Runnig hard platform game",
+	img			: posts.Sabotazu.img,
+	html		: posts.Sabotazu.html
+}
 export default {
 	Portfolio,
 	Boostcamp,
 	Blog,
 	BLER,
 	Account,
-	Todo
+	Todo,
+	DQRN,
+	Hospital,
+	Sabotazu
 }

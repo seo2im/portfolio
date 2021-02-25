@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DQRN</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="autocar-applying-dqn">AutoCar applying DQN</h1>
+<p><strong>Qualcomm Innovation Award exhibit</strong> project. Most auto car model use CNN or RNN model because image recognition. But only <strong>DQN</strong>(Deep Q Learning - reinforce learning) can make auto car moving.</p>
+<p><a href="%5Bhttps://github.com/syleLim/DRQN_car%5D(https://github.com/syleLim/DRQN_car)"><strong>github link</strong></a></p>
+<h2 id="spec">Spec</h2>
+<p><code>python</code>, <code>tensorflow</code>, <code>DQN</code>,  <code>rasberry PI</code>, <code>RC car</code>, <code>AWS</code></p>
+<h2 id="start">Start</h2>
+<p>RC car model is <a href="%5Bhttps://ko.aliexpress.com/item/32844901968.html%5D(https://ko.aliexpress.com/item/32844901968.html)"><strong>this</strong></a>. Work place is <strong>AWS</strong> server, spec graphic card model for deep learning.</p>
+<h2 id="rc-car">RC car</h2>
+<p>RC car run with rasberry PI, get camera information and recognition of object. Basic setting be structed formal subject, rewrite things below.</p>
+<ol>
+<li>Module must move server’s command, not press key or else.
+<ul>
+<li>Server send <strong>tcp packet</strong> for moving signal</li>
+<li>Must <strong>guarantee order</strong> of signals.</li>
+</ul>
+</li>
+<li>Camera information(image) fast be sent to  server
+<ul>
+<li>Image data little much size, so usually use UDP , but this data must be not loose. so object detection.</li>
+<li>Use <a href="%5Bhttps://xgboost.readthedocs.io/en/latest/%5D(https://xgboost.readthedocs.io/en/latest/)"><strong>XGBoost</strong></a> model for recognition is in rasberry PI, not server. It little heavy, but <strong>fast</strong>.</li>
+</ul>
+</li>
+<li>TCP server construction to desktop (or AWS) Server to wifi-connect
+<ul>
+<li>Collected data have to send Desktop for deep learning.</li>
+<li>Must <strong>guarantee data is right</strong>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="dqn-model">DQN model</h2>
+<p>First time, simulation model like <strong>atary game</strong>. Each server’s sim_models work with different parameter(threshold). 10000 * 10000 train in one time.</p>
+<p>Default setting is n * n box, set obstacle and goal to front of car. Car go front or left, right, calculate axis. If cat get collision point minus, pass obstacle plus point, get goal plus more point.</p>
+<p>Testing different point parameters. Check static graph &amp; epsilon, <strong>choose best model.</strong></p>
+<p>Choose model test real car, check it is smooth &amp; correct</p>
+<h2 id="result">Result</h2>
+<p>Get Award, last 10 person, get 5,000 dollars winning.</p>
+</div>
+</body>
+
+</html>

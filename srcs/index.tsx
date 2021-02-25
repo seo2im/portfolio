@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 const Main = React.lazy(() => import("./Pages/Main/Main"));
 const Project = React.lazy(() => import("./Pages/Project/Project"));
+import Footer from './Footer/Footer'
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
 						<Route exact path="/" component={Main}/>
 						<Route path="/project/:name" component={Project}/>
 					</Switch>
+					<Footer/>
 				</ThemeProvider>
 			</Suspense>
 		</Router>
