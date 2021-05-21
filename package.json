@@ -2,9 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --config ./configuration/webpack.config.js",
+    "build": "webpack --mode production --config ./configuration/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "eslint": "^7.26.0",
     "eslint-plugin-react": "^7.23.2",
     "html-webpack-plugin": "^5.3.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
