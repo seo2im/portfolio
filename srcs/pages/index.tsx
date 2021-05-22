@@ -1,23 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Main from './Main/Main'
 import Projects from './Projects/Projects'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import { Nav } from '../components'
 import config from '../../configuration'
 
+const usePage = (): [JSX.Element[], number, (page:number) => void] => {
+    const [page, setPage ] = useState<number>(0)
+    const pages = [<Main key={'main'}/>, <Projects key={'projects'}/>]
+
+    return [pages, page, setPage]
+}
+
 const Root: React.FC = () => {
+    const [pages, page, setPage] = usePage()
+    
     return (
         <layout.Grid>
             <layout.Left>
-                <Nav contents={config.nav.contents}/>
+                <Nav contents={config.nav.contents} setPage={setPage}/>
             </layout.Left>
-            <Router>
-                <Switch>
-                    <Route exact path='/' component={Main} />
-                    <Route path='/projects' component={Projects} />
-                </Switch>
-            </Router>
+            <layout.Section>
+                {pages[page]}
+            </layout.Section>
         </layout.Grid>
     )
 }
@@ -29,10 +34,9 @@ const layout = {
         display: flex;
     `,
     Left : styled.div`
-        width: 10rem;
+        width: 20rem;
     `,
-
     Section: styled.div`
-        width: clac(100% - 20rem);
+        width: calc(100% - 40rem);
     `
 }
