@@ -18,7 +18,7 @@ const Root: React.FC = () => {
     return (
         <layout.Grid>
             <layout.Left>
-                <Nav contents={config.nav.contents} setPage={setPage}/>
+                <Nav contents={config.nav.contents} page={page} setPage={setPage}/>
             </layout.Left>
             <layout.Section>
                 {pages[page]}
