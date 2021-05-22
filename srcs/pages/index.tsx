@@ -7,7 +7,7 @@ import config from '../../configuration'
 
 const usePage = (): [JSX.Element[], number, (page:number) => void] => {
     const [page, setPage ] = useState<number>(0)
-    const pages = [<Main key={'main'}/>, <Projects key={'projects'}/>]
+    const pages = [<Main setPage={setPage} key={'main'}/>, <Projects key={'projects'}/>]
 
     return [pages, page, setPage]
 }
