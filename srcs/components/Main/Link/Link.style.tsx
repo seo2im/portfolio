@@ -3,14 +3,20 @@ import styled from 'styled-components'
 export const Layout = styled.div`
     display: flex;
 
+    width: 20rem;
+
     border: 1px solid black;
+    
+    margin-right: 1rem;
 `
 export const Logo = styled.div`
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
 
-    background: color;
+    margin: 1rem;
+
+    background: black;
 `
 export const Text = styled.div`
-
+    margin: auto;
 `

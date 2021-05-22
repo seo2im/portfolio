@@ -14,10 +14,11 @@ export const Section = styled.div`
     margin-top: 8rem;
 `
 export const Left = styled.div`
-    width: 35%;
+    width: 35rem;
 `
 export const Right = styled.div`
-    width: 65%;
+    width: calc(100% - 35rem);
+    padding-right: 7rem;
 `
 export const Bottom = styled.div`
     display: flex;
