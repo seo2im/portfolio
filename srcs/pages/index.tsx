@@ -34,9 +34,9 @@ const layout = {
         display: flex;
     `,
     Left : styled.div`
-        width: 10rem;
+        width: 20rem;
     `,
     Section: styled.div`
-        width: clac(100% - 20rem);
+        width: calc(100% - 40rem);
     `
 }
