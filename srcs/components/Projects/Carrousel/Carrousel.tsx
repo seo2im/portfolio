@@ -10,7 +10,7 @@ type Props = {
         url: string,
     }[]
 }
-const width = 500;
+const width = 1000;
 const Carrousel: React.FC<Props> = ({ projects }) => {
     const [idx, setIdx] = useState<number>(1)
     const [isMove, setIsMove] = useState<boolean>(false)
@@ -39,7 +39,6 @@ const Carrousel: React.FC<Props> = ({ projects }) => {
         }
     }
     
-
     return (
         <carrousel.Layout width={width}>
             <carrousel.Slide width={width} num={projects.length + 2} idx={idx} duration={duration} onTransitionEnd={transitionEnd}>
