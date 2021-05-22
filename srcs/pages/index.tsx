@@ -37,6 +37,6 @@ const layout = {
         width: 20rem;
     `,
     Section: styled.div`
-        width: calc(100% - 40rem);
+        width: calc(100% - 20rem);
     `
 }
