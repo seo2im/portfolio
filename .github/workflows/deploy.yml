@@ -44,10 +44,9 @@ jobs:
               ${{ runner.OS }}-
 
       - name: npm install #set dependency
-        run: npm install
-
-      - name: npm build #building react app
-        run: npm run build
+        run: |
+          npm install
+          npm run build
         
       - name: move to deploy
         run: |
