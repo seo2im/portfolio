@@ -38,20 +38,10 @@ jobs:
         run: |
           cd ..
           git clone https://github.com/seo2im/portfolio.git deploy
-            
-      - name: Cache node modules      # node modules 캐싱
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-              ${{ runner.OS }}-build-
-              ${{ runner.OS }}-
 
       - name: npm install #set dependency
         run: |
           npm install
-          ls
           npm run build
         
       - name: move to deploy
