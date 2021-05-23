@@ -36,26 +36,18 @@ jobs:
 
       - name: clone data
         run: |
-          ls
-          ls portfolio
-          cd ..
-          ls
-          ls portfolio
           git clone https://github.com/seo2im/portfolio.git deploy
-          ls
 
       - name: npm install #set dependency
         run: |
-          ls
-          ls portfolio
-          pwd
+          cd portfolio
           npm install
           npm run build
         
       - name: move to deploy
         run: |
           rm -rf ../deploy/*
-          mv ./docs/* ../deploy
+          mv ./portfolio/* ../deploy
 
       - name: push
         run: |
