@@ -2,6 +2,8 @@ import React from 'react'
 import * as main from './Main.style'
 import { Postit, Title, Link } from '../../components'
 import config from '../../../configuration'
+import gitLogo from '../../../public/git.png'
+import logo from '../../../public/logo.png' 
 
 type Props = {
     setPage: (page: number) => void
@@ -23,11 +25,11 @@ const Main: React.FC<Props> = ({ setPage }) => {
             </main.Section>
             <main.Bottom>
                 <Link
-                    srcs={config.main.git.srcs}
+                    srcs={gitLogo}
                     text={config.main.git.text}
                     linker={() => window.location.href = 'https://github.com/seo2im'}/>
                 <Link
-                    srcs={config.main.myProject.srcs}
+                    srcs={logo}
                     text={config.main.myProject.text}
                     linker={() => setPage(1)}/>
             </main.Bottom>

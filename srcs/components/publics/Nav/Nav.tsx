@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import * as nav from './Nav.style'
 import { TypoText } from '../../'
+import logo from '../../../../public/logo.png'
 
 type Props = {
     contents: {
@@ -15,7 +16,7 @@ const Nav: React.FC<Props> = ({ contents, page, setPage }) => {
 
     return (
         <nav.Layout onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <nav.Logo onClick={() => setPage(0)}/>
+            <nav.Logo src={logo} onClick={() => setPage(0)}/>
             <nav.Section>
                 {contents.map((content, i) => {
                     return (

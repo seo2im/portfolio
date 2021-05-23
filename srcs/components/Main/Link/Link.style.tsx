@@ -5,17 +5,22 @@ export const Layout = styled.div`
 
     width: 20rem;
 
-    border: 1px solid black;
+    border-radius: 1rem;
+
+    box-shadow: 0px 0px 10px black;
     
     margin-right: 1rem;
+
+    transition: transform 0.5s;
+    &:hover {
+        transform: translate(0, -10px);
+    }
 `
-export const Logo = styled.div`
+export const Logo = styled.img`
     width: 50px;
     height: 50px;
 
     margin: 1rem;
-
-    background: black;
 `
 export const Text = styled.div`
     margin: auto;
