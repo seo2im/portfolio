@@ -37,13 +37,17 @@ jobs:
       - name: clone data
         run: |
           ls
+          ls portfolio
           cd ..
           ls
+          ls portfolio
           git clone https://github.com/seo2im/portfolio.git deploy
+          ls
 
       - name: npm install #set dependency
         run: |
           ls
+          ls portfolio
           pwd
           npm install
           npm run build
