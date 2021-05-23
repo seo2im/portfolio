@@ -44,7 +44,7 @@ const Carrousel: React.FC<Props> = ({ projects }) => {
             <carrousel.Slide width={width} num={projects.length + 4} idx={idx} duration={duration} onTransitionEnd={transitionEnd}>
                 {projectsCards(projects).map((project, i) => (
                     <carrousel.Content key={`carrosel_${i}`} width={width}>
-                        <Card {...project}/>
+                        <Card {...project} isMove={isMove}/>
                     </carrousel.Content>
                 ))}
             </carrousel.Slide>

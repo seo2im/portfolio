@@ -8,9 +8,7 @@ export const Layout = styled.div<{ width: number}>`
     
     overflow: hidden;
 
-    border: 1px solid black;
-    
-    position: relative;    
+    position: relative;
 `
 export const Slide = styled.div<{ width: number, num: number, idx: number, duration: number }>`
     display: flex;
