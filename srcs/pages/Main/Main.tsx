@@ -1,6 +1,6 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Box, Career, Description, Title, Link } from '../../components'
+import { Postit, Career, Description, Title, Link } from '../../components'
 import config from '../../../configuration'
 
 type Props = {
@@ -11,19 +11,13 @@ const Main: React.FC<Props> = ({ setPage }) => {
         <main.Layout>
             <main.Section>
                 <main.Left>
-                    <Box title={config.main.introduce.title} size='large'>
-                        <Description content={config.main.introduce.Description} />
-                    </Box>
-                    <Box title={config.main.career.title} size='large'>
-                        <Career careers={config.main.career.careers}/>
-                    </Box>
+                    <Postit {...config.main.introduce} size='large' postId={0} />
+                    <Postit {...config.main.career} size='large' postId={1} />
                 </main.Left>
                 <main.Right>
                     <Title title={config.main.objects.title} size={'large'}/>
                     {config.main.objects.object.map((obj, i) => (
-                        <Box title={obj.title} size='middle' key={`obj_${i}`}>
-                            <Description content={obj.description} />
-                        </Box>
+                        <Postit {...obj} size='middle' key={`obj_${i}`} postId={i + 2} />
                     ))}
                 </main.Right>
             </main.Section>

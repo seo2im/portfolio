@@ -1,20 +1,30 @@
-import React from 'react'
-import * as box from './Postit.style'
-import { Title } from '../..'
+import React, { useState } from 'react'
+import * as postit from './Postit.style'
+import { Title, Description, Career } from '../..'
 
 type Props = {
     title: string
+    description?: string
+    careers?: {
+        date: string
+        content: string
+    }[]
     size: 'large' | 'middle'
+    postId: number
 }
-const Box: React.FC<Props> = ({ title, size, children }) => {
+const Postit: React.FC<Props> = ({ title, description, careers, size, postId}) => {
+    const [hover, setHover] = useState<boolean>(false)
     return (
-        <box.Post>
-        <box.Layout>
-            <Title title={title} size={size} />
-            {children}
-        </box.Layout>
-        </box.Post>
+        <postit.Back postId={postId} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+            <postit.Post postId={postId}>
+                <Title title={title} size={size} />
+                <postit.ContentWrapper postId={postId} >
+                    {description ? <Description hover={hover} content={description} /> : null}
+                    {careers ? <Career careers={careers} /> : null}
+                </postit.ContentWrapper>
+            </postit.Post>
+        </postit.Back>
     )
 }
 
-export default Box
+export default Postit

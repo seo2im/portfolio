@@ -9,7 +9,7 @@ type palette = {
     black: string
     white: string
 }
-type postit = {
+type postitColor = {
     yellow: string
     sky: string
     red: string
@@ -18,10 +18,23 @@ type postit = {
     gray: string
     green: string
 }
+type postIt = {
+    position: string
+    backColor: string
+    backOrigin: string
+    backShadow: string
+    backDegree: number
+    postColor: string
+    postOrigin: string
+    postShadow: string
+    postDegree: number
+    contentDegree: number
+}
 
 declare module 'styled-components' {
     export interface DefaultTheme {
         palette: palette
-        postit: postit
+        postitColor: postitColor
+        postit: postIt[]
     }
 }

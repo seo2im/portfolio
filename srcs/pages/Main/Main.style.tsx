@@ -11,10 +11,10 @@ export const Section = styled.div`
     height: 75vh;
     width: 85rem;
 
-    margin-top: 8rem;
+    margin-top: 5rem;
 `
 export const Left = styled.div`
-    width: 35rem;
+    width: 45rem;
     margin-right: 10rem;
 `
 export const Right = styled.div`
