@@ -19,7 +19,9 @@ export const Post = styled.div<{ postId: number }>`
     transform-origin: ${({ theme, postId }) => theme.postit[postId].postOrigin};
     transform: rotate(${({ theme, postId }) => theme.postit[postId].postDegree}deg);
 `
-export const ContentWrapper = styled.div<{ postId: number }>`
+export const ContentWrapper = styled.div<{ postId: number, height: number }>`
+    height: ${({ height }) => height}px;
+
     transform-origin: 0px 0px;
     transform: rotate(${({ theme, postId }) => theme.postit[postId].contentDegree}deg);
 `

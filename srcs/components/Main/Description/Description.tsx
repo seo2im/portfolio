@@ -7,10 +7,11 @@ type Props = {
     hover: boolean
 }
 const Description: React.FC<Props> = ({ content, hover }) => {
+    
 
     return (
         <description.Layout >
-            <TypoText text={content} trigger={hover} speed={1}/>
+            <TypoText start={8} text={content} trigger={hover} speed={2} cursorOn={true} deleteOff/>
         </description.Layout>
     )
 }
