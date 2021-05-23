@@ -32,7 +32,7 @@ jobs:
       - name: clone data
         run: |
           cd ..
-          git clone https://github.com/seo2im/portfolio.git portfolio
+          git clone https://github.com/seo2im/portfolio.git deploy
             
       - name: Cache node modules      # node modules 캐싱
         uses: actions/cache@v1
@@ -49,6 +49,11 @@ jobs:
       - name: npm build #building react app
         run: npm run buil
         
+      - name: move to deploy
+        run: |
+          rm -rf ../deploy/*
+          mv ./docs/* ../deploy
+
       - name: push
         run: |
           git add .
