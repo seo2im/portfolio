@@ -4,6 +4,8 @@ export const Layout = styled.div`
     width: 30rem;
     height: 100%;
     
+    margin: auto;
+    
     border: 1px solid black;
 `
 export const Title = styled.div<{ hover: boolean }>`

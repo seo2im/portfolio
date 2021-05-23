@@ -10,7 +10,7 @@ type Props = {
         url: string,
     }[]
 }
-const width = 1000;
+const width = 40;
 const Carrousel: React.FC<Props> = ({ projects }) => {
     const [idx, setIdx] = useState<number>(1)
     const [isMove, setIsMove] = useState<boolean>(false)
@@ -24,7 +24,7 @@ const Carrousel: React.FC<Props> = ({ projects }) => {
     }
 
     const projectsCards = (projects: any[]) => {
-        return [projects[projects.length - 1], ...projects, projects[0]]
+        return [projects[projects.length - 2], projects[projects.length - 1], ...projects, projects[0], projects[1]]
     }
 
     const transitionEnd = () => {
@@ -33,15 +33,15 @@ const Carrousel: React.FC<Props> = ({ projects }) => {
             setDuration(0)
             setIdx(projects.length)
         }
-        if (idx === projects.length + 2) {
+        if (idx === projects.length + 1) {
             setDuration(0)
-            setIdx(0)
+            setIdx(1)
         }
     }
     
     return (
         <carrousel.Layout width={width}>
-            <carrousel.Slide width={width} num={projects.length + 2} idx={idx} duration={duration} onTransitionEnd={transitionEnd}>
+            <carrousel.Slide width={width} num={projects.length + 4} idx={idx} duration={duration} onTransitionEnd={transitionEnd}>
                 {projectsCards(projects).map((project, i) => (
                     <carrousel.Content key={`carrosel_${i}`} width={width}>
                         <Card {...project}/>
