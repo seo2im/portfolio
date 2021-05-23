@@ -47,7 +47,7 @@ jobs:
         run: npm install
 
       - name: npm build #building react app
-        run: npm run buil
+        run: npm run build
         
       - name: move to deploy
         run: |
