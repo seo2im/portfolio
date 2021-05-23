@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as nav from './Nav.style'
+import { TypoText } from '../../'
 
 type Props = {
     contents: {
@@ -10,18 +11,22 @@ type Props = {
     setPage: (page:number) => void
 }
 const Nav: React.FC<Props> = ({ contents, page, setPage }) => {
+    const [hover, setHover] = useState<boolean>(false)
+
     return (
-        <nav.Layout>
+        <nav.Layout onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
             <nav.Logo onClick={() => setPage(0)}/>
             <nav.Section>
-                {contents.map((content, i) => (
-                    <nav.Menu 
-                        key={`nav_${i}`}
-                        onClick={() => setPage(i)}
-                        select={page === i}>
-                        {content.message}
-                    </nav.Menu>
-                ))}
+                {contents.map((content, i) => {
+                    return (
+                        <nav.Menu 
+                            key={`nav_${i}`}
+                            onClick={() => setPage(i)}
+                            select={page === i}>
+                            <TypoText trigger={hover} text={content.message} />
+                        </nav.Menu>
+                    )
+                })}
             </nav.Section>
         </nav.Layout>
     )
