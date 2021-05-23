@@ -3,6 +3,7 @@
 */
 export { default as Nav } from './publics/Nav/Nav'
 export { default as TypoText } from './publics/TypoText/TypoText'
+export { default as Background } from './publics/Background/Background'
 /*
     Main
 */
