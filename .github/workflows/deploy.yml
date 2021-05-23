@@ -1,8 +1,9 @@
 name: deploy app
 on: 
-  push:
+  pull:
     branches:
       - development
+  
 jobs:
   build:
     runs-on: ubuntu-18.04
