@@ -11,6 +11,11 @@ jobs:
         uses: actions/checkout@master
         with:
           path: portfolio
+      
+      - name: checkout node
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.18.3
 
       - name: git config
         env:
@@ -46,6 +51,7 @@ jobs:
       - name: npm install #set dependency
         run: |
           npm install
+          ls
           npm run build
         
       - name: move to deploy
