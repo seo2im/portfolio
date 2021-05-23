@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import * as carrousel from './Carrousel.style'
 import { Card } from '../../'
+import { useCarrousel } from '../../../hooks'
 
 type Props = {
     projects: {
@@ -9,40 +10,16 @@ type Props = {
         srcs: string,
         url: string,
     }[]
+    width: number
 }
-const width = 40;
-const Carrousel: React.FC<Props> = ({ projects }) => {
-    const [idx, setIdx] = useState<number>(1)
-    const [isMove, setIsMove] = useState<boolean>(false)
-    const [duration, setDuration] = useState<number>(500)
-    
-    const move = (move: number) => {
-        if (isMove) return
-        else setIsMove(true)
-        setDuration(500)
-        setIdx(idx + move)
-    }
 
-    const projectsCards = (projects: any[]) => {
-        return [projects[projects.length - 2], projects[projects.length - 1], ...projects, projects[0], projects[1]]
-    }
-
-    const transitionEnd = () => {
-        setIsMove(false)
-        if (idx === 0) {
-            setDuration(0)
-            setIdx(projects.length)
-        }
-        if (idx === projects.length + 1) {
-            setDuration(0)
-            setIdx(1)
-        }
-    }
+const Carrousel: React.FC<Props> = ({ projects, width }) => {
+    const [idx, move, duration, transitionEnd, isMove, items]  = useCarrousel(500, projects, 2)
     
     return (
         <carrousel.Layout width={width}>
             <carrousel.Slide width={width} num={projects.length + 4} idx={idx} duration={duration} onTransitionEnd={transitionEnd}>
-                {projectsCards(projects).map((project, i) => (
+                {items.map((project, i) => (
                     <carrousel.Content key={`carrosel_${i}`} width={width}>
                         <Card {...project} isMove={isMove}/>
                     </carrousel.Content>
