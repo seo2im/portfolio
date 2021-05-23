@@ -13,16 +13,19 @@ export const Section = styled.div`
 export const Menu = styled.div<{ select: boolean }>`
     margin-top: 1rem;
 
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: ${({ select }) => select? 'blue' : 'black'};
 `
-export const Logo = styled.div`
+export const Logo = styled.img`
     position: relative;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+
+    border 1px solid black;
+    border-radius: 50px;
 
     background: black;
 `

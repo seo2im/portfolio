@@ -3,10 +3,11 @@
 */
 export { default as Nav } from './publics/Nav/Nav'
 export { default as TypoText } from './publics/TypoText/TypoText'
+export { default as Background } from './publics/Background/Background'
 /*
     Main
 */
-export { default as Box } from './Main/Box/Box'
+export { default as Postit } from './Main/Postit/Postit'
 export { default as Title } from './Main/Title/Title'
 export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'

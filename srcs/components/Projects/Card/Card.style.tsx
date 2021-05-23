@@ -19,5 +19,5 @@ export const Description = styled.div<{ hover: boolean }>`
     margin-left: 4rem;
 
     transition: opacity 1s;
-    opacity: ${({ hover }) => hover ? '1': '0'};  
+    opacity: ${({ hover }) => hover ? '1': '0'};
 `
