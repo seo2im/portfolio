@@ -2,6 +2,7 @@
     Public
 */
 export { default as Nav } from './publics/Nav/Nav'
+export { default as TypoText } from './publics/TypoText/TypoText'
 /*
     Main
 */
