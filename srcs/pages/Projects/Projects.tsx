@@ -6,7 +6,7 @@ import config from '../../../configuration'
 const Projects: React.FC = () => {
     return (
         <projects.Layout>
-            <Carrousel projects={config.projects}/>
+            <Carrousel projects={config.projects} width={40}/>
         </projects.Layout>
     )
 }

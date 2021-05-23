@@ -6,7 +6,7 @@ import { Nav, Background } from '../components'
 import config from '../../configuration'
 
 const usePage = (): [JSX.Element[], number, (page:number) => void] => {
-    const [page, setPage ] = useState<number>(0)
+    const [page, setPage ] = useState<number>(1)
     const pages = [<Main setPage={setPage} key={'main'}/>, <Projects key={'projects'}/>]
 
     return [pages, page, setPage]
