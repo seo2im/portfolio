@@ -2,7 +2,7 @@ name: deploy app
 on: 
   push:
     branches:
-      - development
+      - master
   
 jobs:
   build:
@@ -47,12 +47,12 @@ jobs:
         
       - name: move to deploy
         run: |
-          ls
           rm -rf ./deploy/*
           mv ./portfolio/* ./deploy
 
       - name: push
         run: |
+          cd deploy
           git add .
           git commit -m "feat:deployment"
           git push origin master
