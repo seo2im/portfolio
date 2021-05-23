@@ -1,5 +1,4 @@
 {
-  "homepages": "https://seo2im.github.io/portfolio",
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
@@ -18,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/seo2im/portfolio/issues"
   },
-  "homepage": "https://github.com/seo2im/portfolio#readme",
+  "homepage": "https://github.com/seo2im/portfolio",
   "dependencies": {
     "@types/node": "^15.6.0",
     "@types/react": "^17.0.6",
