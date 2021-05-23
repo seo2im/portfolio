@@ -1,27 +1,27 @@
 name: deploy app
 on: 
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 jobs:
-    update:
-        runs-on: ubuntu-18.04
-        steps:
-            - name: checkout code #get repo file
-            - uses: actions/checkout@master
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout code #get repo file
+        uses: actions/checkout@master
             
-            - name: Cache node modules      # node modules 캐싱
-              uses: actions/cache@v1
-              with:
-                path: node_modules
-                key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-                restore-keys: |
-                    ${{ runner.OS }}-build-
-                    ${{ runner.OS }}-
+      - name: Cache node modules      # node modules 캐싱
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+              ${{ runner.OS }}-build-
+              ${{ runner.OS }}-
 
-            - name: npm install #set dependency
-            - run: npm install
+      - name: npm install #set dependency
+        run: npm install
 
-            - name: npm build #building react app
-            - run: npm run build
+      - name: npm build #building react app
+        run: npm run build
 
