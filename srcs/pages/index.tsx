@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Main from './Main/Main'
 import Projects from './Projects/Projects'
 import styled from 'styled-components'
-import { Nav, Background } from '../components'
+import { Nav } from '../components'
 import config from '../../configuration'
 
 const usePage = (): [JSX.Element[], number, (page:number) => void] => {
-    const [page, setPage ] = useState<number>(1)
+    const [page, setPage ] = useState<number>(0)
     const pages = [<Main setPage={setPage} key={'main'}/>, <Projects key={'projects'}/>]
 
     return [pages, page, setPage]
@@ -17,7 +17,6 @@ const Root: React.FC = () => {
     
     return (
         <layout.Grid>
-            <Background />
             <layout.Left>
                 <Nav contents={config.nav.contents} page={page} setPage={setPage}/>
             </layout.Left>
