@@ -4,6 +4,7 @@ import styled from 'styled-components'
     Layout of This Page
 */
 export const Layout = styled.div`
+    position: relative;
 `
 export const Section = styled.div`
     display: flex;
