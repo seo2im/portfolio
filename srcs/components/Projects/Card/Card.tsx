@@ -15,8 +15,10 @@ const Card: React.FC<Props> = ({ title, description, srcs, url, color, isMove })
     return (
             <card.Layout onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} color={color}>
                 <card.Wrapper hover={hover} isMove={isMove}/>
-                <card.Title hover={hover} isMove={isMove}>{title}</card.Title>
-                <card.Description hover={hover} isMove={isMove}>{description}</card.Description>
+                <card.TextWrapper>
+                    <card.Title hover={hover} isMove={isMove}>{title}</card.Title>
+                    <card.Description hover={hover} isMove={isMove}>{description}</card.Description>
+                </card.TextWrapper>
             </card.Layout>
         
     )

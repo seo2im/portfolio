@@ -24,13 +24,19 @@ export const Wrapper = styled.div<{ hover: boolean, isMove: boolean }>`
     width: 35rem;
     height: 35rem;
     border-radius: 17.5rem;
-
 `
-export const Title = styled.div<{ hover: boolean, isMove: boolean }>`
+export const TextWrapper = styled.div`
+    overflow: hidden;
+
     position: absolute;
     top: 40%;
     left: 1rem;
 
+    height: 10rem;
+    width: 80%;
+`
+
+export const Title = styled.div<{ hover: boolean, isMove: boolean }>`
     font-size: 3rem;
     word-break: none;
     
@@ -44,6 +50,6 @@ export const Description = styled.div<{ hover: boolean, isMove: boolean }>`
 
     word-break: keep-all;
 
-    transition: opacity 1s;
-    opacity: ${({ hover, isMove }) => hover && !isMove ? '1': '0'};
+    transition: transform 0.5s;
+    transform: translate(0, ${({ hover, isMove }) => hover && !isMove ? '10' : '100'}px);
 `
