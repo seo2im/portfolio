@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Layout = styled.div<{ width: number}>`
+export const Layout = styled.div<{ width: number, load: boolean }>`
     width: 90%;
     height: 80vh;
     
@@ -8,8 +8,10 @@ export const Layout = styled.div<{ width: number}>`
     
     overflow: hidden;
 
-    border: 1px solid black;
     position: relative;
+    
+    transition: transform 2s ease-out;
+    transform:translate(${({ load }) => load ? '0, 0' : '3000px, 0'});
 `
 export const Slide = styled.div<{ width: number, num: number, idx: number, duration: number }>`
     display: flex;
@@ -26,8 +28,6 @@ export const Content = styled.div<{ width: number }>`
     
     margin: auto;
     padding: 1rem;
-    
-
 `
 export const Arrow = styled.button<{ position: string }>`
     position: absolute;
@@ -38,17 +38,16 @@ export const Arrow = styled.button<{ position: string }>`
     background-color: transparent;
     border: none;
 
-    color: black;
+    color: white;
     font-size: 5rem;
     
     cursor: pointer;
     
     z-index: 99;
     
-    transition: opacity 0.5s;
-    opacity: 0;
+    transition: transform 0.5s;
     &:hover {
-        opacity: 1;
+        transform:translate(0, -5px);
     }
     &:focus {
         outline: none;
