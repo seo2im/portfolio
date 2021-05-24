@@ -11,16 +11,20 @@ export const Layout = styled.div<{ color: string }>`
     border: 1px solid black;
 
     background: ${({ color }) => color};
+
+    overflow: hidden;
 `
 export const Wrapper = styled.div<{ hover: boolean, isMove: boolean }>`
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: white;
     
     position: relative;
-    top: ${({ hover, isMove }) => hover && !isMove ? '0' : '40%'};
+    left: -5rem;
+    top: 5rem;
     
-    transition: height 1s, top 1s;
-    
-    height: ${({ hover, isMove }) => hover && !isMove ? '100%' : '6rem'};
+    width: 35rem;
+    height: 35rem;
+    border-radius: 17.5rem;
+
 `
 export const Title = styled.div<{ hover: boolean, isMove: boolean }>`
     position: absolute;
@@ -37,6 +41,8 @@ export const Description = styled.div<{ hover: boolean, isMove: boolean }>`
     position: absolute;
     top: 50%;
     left: 1rem;
+
+    word-break: keep-all;
 
     transition: opacity 1s;
     opacity: ${({ hover, isMove }) => hover && !isMove ? '1': '0'};

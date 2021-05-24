@@ -38,7 +38,7 @@ export const Arrow = styled.button<{ position: string }>`
     background-color: transparent;
     border: none;
 
-    color: white;
+    color: ${({ position }) => position === 'right' ? 'black' : 'white'};
     font-size: 5rem;
     
     cursor: pointer;
