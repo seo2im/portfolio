@@ -8,10 +8,12 @@ export const Layout = styled.div`
     
     border: 1px solid black;
 `
+export const Expand = styled.div`
+
+`
 export const Title = styled.div<{ hover: boolean, isMove: boolean }>`
     font-size: 3rem;
 
-    margin-top: 50%;
     margin-left: 1rem;
     
     transition: transform 1s;
