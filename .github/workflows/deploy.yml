@@ -35,24 +35,15 @@
 #           chmod 600 ~/.ssh/id_rsa
 #           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-#       - name: clone data
-#         run: |
-#           git clone https://github.com/seo2im/portfolio.git deploy
-
 #       - name: npm install #set dependency
 #         run: |
 #           cd portfolio
 #           npm install
 #           npm run build
-        
-#       - name: move to deploy
-#         run: |
-#           rm -rf ./deploy/*
-#           mv ./portfolio/* ./deploy
 
 #       - name: push
 #         run: |
-#           cd deploy
+#           git checkout origin master
 #           git add .
 #           git commit -m "feat:deployment"
 #           git push origin master

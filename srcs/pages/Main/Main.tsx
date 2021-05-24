@@ -12,7 +12,7 @@ type Props = {
 const Main: React.FC<Props> = ({ setPage }) => {
     return (
         <main.Layout>
-            <Background src={background} width={1800} top={-100} left={-100}/>
+            <Background src={background} width={1800} top={-100} left={-210}/>
             <main.Section>
                 <main.Left>
                     <Postit {...config.main.introduce} size='large' />
