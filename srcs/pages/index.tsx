@@ -3,7 +3,7 @@ import Main from './Main/Main'
 import Projects from './Projects/Projects'
 import Project from './Project/Project'
 import styled from 'styled-components'
-import { Nav, Canvas } from '../components'
+import { Nav, Background } from '../components'
 import config from '../../configuration'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -29,13 +29,10 @@ const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) =
 
 const Lobby: React.FC = () => {
     const [page, changePage, idx, setIdx, isOut] = usePage()
-    const draw = (ctx: CanvasRenderingContext2D, frameCount?: number) => {
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-    }
 
     return (
         <layout.Grid>
-            <Canvas draw={draw} />
+            <Background />
             <layout.Left>
                 <Nav contents={config.nav.contents} page={idx} setPage={setIdx}/>
             </layout.Left>

@@ -3,7 +3,7 @@ import * as canvas from './Canvas.style'
 import { useCanvas } from '../../../hooks'
 
 type Prop = {
-    draw: (CanvasRenderingContext2D, framCount?: number) => void
+    draw: (CanvasRenderingContext2D, framCount: number) => void
     fill?: string
     stroke?: string
     isAnim?: boolean
