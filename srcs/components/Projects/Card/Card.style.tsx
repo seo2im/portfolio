@@ -1,27 +1,65 @@
 import styled from 'styled-components'
 
-export const Layout = styled.div`
+export const Layout = styled.div<{ color: string }>`
+    position: relative;
+
     width: 30rem;
     height: 100%;
     
     margin: auto;
     
     border: 1px solid black;
+
+    background: ${({ color }) => color};
+
+    overflow: hidden;
 `
-export const Expand = styled.div`
+export const Wrapper = styled.div<{ hover: boolean, isMove: boolean }>`
+    background-color: white;
+
+    overflow: hidden;
+    
+    position: relative;
+    left: -5rem;
+    top: 5rem;
+    
+    width: 35rem;
+    height: 35rem;
+    border-radius: 17.5rem;
+`
+export const Img = styled.img<{ height: string, top: string, left: string }>`
+    height: ${({ height }) => height};
+    
+    position: relative;
+    top: ${({ top }) => top};
+    left: ${({ left }) => left};
 
 `
+export const TextWrapper = styled.div`
+    overflow: hidden;
+
+    position: absolute;
+    top: 40%;
+    left: 1rem;
+
+    height: 10rem;
+    width: 80%;
+`
+
 export const Title = styled.div<{ hover: boolean, isMove: boolean }>`
     font-size: 3rem;
-
-    margin-left: 1rem;
+    word-break: none;
     
     transition: transform 1s;
-    transform: translate(0, ${({ hover, isMove }) => hover && !isMove ? '-50' : '10'}px);
+    transform: translate(0, ${({ hover, isMove }) => hover && !isMove ? '-100' : '10'}px);
 `
 export const Description = styled.div<{ hover: boolean, isMove: boolean }>`
-    margin-left: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
 
-    transition: opacity 1s;
-    opacity: ${({ hover, isMove }) => hover && !isMove ? '1': '0'};
+    word-break: keep-all;
+
+    transition: transform 0.5s;
+    transform: translate(0, ${({ hover, isMove }) => hover && !isMove ? '10' : '100'}px);
 `
