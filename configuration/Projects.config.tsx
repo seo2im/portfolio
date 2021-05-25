@@ -10,7 +10,7 @@ const projects = [
             top: '10px',
             left: '120px',
         },
-        url: '',
+        url: '/project/0',
         color: '#adeef1'
     },{
         title: 'Matching 42',
@@ -21,7 +21,7 @@ const projects = [
             top: '150px',
             left: '0px',
         },
-        url: '',
+        url: '/project/1',
         color: '#ffcfb0'
     },{
         title: 'Static 42',
@@ -32,7 +32,7 @@ const projects = [
             top: '10px',
             left: '20px',
         },
-        url: '',
+        url: '/project/3',
         color: '#c0f2a1'
     },{
         title: 'make Porfolio',
@@ -43,7 +43,7 @@ const projects = [
             top: '10px',
             left: '20px',
         },
-        url: '',
+        url: '/project/4',
         color: '#ffed82'
     }
 ]

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Main from './Main/Main'
 import Projects from './Projects/Projects'
+import Project from './Project/Project'
 import styled from 'styled-components'
 import { Nav } from '../components'
 import config from '../../configuration'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) => void, boolean] => {
     const [idx, setIdx] = useState<number>(1)
@@ -25,10 +27,9 @@ const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) =
     return [page, changePage, idx, setIdx, isOut]
 }
 
-const Root: React.FC = () => {
+const Lobby: React.FC = () => {
     const [page, changePage, idx, setIdx, isOut] = usePage()
-
-
+    
     return (
         <layout.Grid>
             <layout.Left>
@@ -38,6 +39,17 @@ const Root: React.FC = () => {
                 {page}
             </layout.Section>
         </layout.Grid>
+    )
+}
+
+const Root: React.FC = () => {
+    return (
+        <Router>
+            <Switch>
+                <Route exact path='/' component={Lobby} />
+                <Route path='/project/:id' component={Project}/>
+            </Switch>
+        </Router>
     )
 }
 
