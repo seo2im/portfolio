@@ -9,6 +9,8 @@ export const Back = styled.div<{ postId: number }>`
     box-shadow: ${({ theme, postId }) => theme.postit[postId].backShadow};
 `
 export const Post = styled.div<{ postId: number }>`
+    color: black;
+
     padding: 2rem 2rem 2rem 2rem;
     margin: 1rem 0;
 

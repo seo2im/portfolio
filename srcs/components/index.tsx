@@ -5,6 +5,7 @@ export { default as Nav } from './publics/Nav/Nav'
 export { default as TypoText } from './publics/TypoText/TypoText'
 export { default as Background } from './publics/Background/Background'
 export { default as Link } from './publics/Link/Link'
+export { default as Canvas } from './publics/Canvas/Canvas'
 /*
     Main
 */

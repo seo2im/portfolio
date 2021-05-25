@@ -15,6 +15,9 @@ export const Layout = styled.div`
     &:hover {
         transform: translate(0, -10px);
     }
+
+    background: white;
+    color: black;
 `
 export const Logo = styled.img`
     width: 50px;
