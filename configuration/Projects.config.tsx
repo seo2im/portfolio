@@ -13,7 +13,13 @@ const projects = [
         url: '/project/0',
         color: '#adeef1',
         git: 'https://github.com/seo2im/BLER-APP',
-        gif: [ source.projects.bler.signin, source.projects.bler.show ]
+        gifs: [{
+            src: source.projects.bler.signin,
+            height: '40rem',
+        },{
+            src: source.projects.bler.show,
+            height: '40rem',
+        }]
     },{
         title: 'Matching 42',
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',

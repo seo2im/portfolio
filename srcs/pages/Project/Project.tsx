@@ -9,12 +9,12 @@ type Prop = {
 }
 
 const Project: React.FC<RouteComponentProps<Prop>> = ({ match }) => {
-    const { title, git, gif } = config.projects[match.params.id]
+    const { title, git, gifs, description } = config.projects[match.params.id]
     
     return (
         <proj.Layout>
             <proj.Section>
-                <Head title={title} git={git} gif={gif}/>
+                <Head title={title} git={git} gifs={gifs} description={description}/>
                 <proj.Content />
             </proj.Section>
         </proj.Layout>
