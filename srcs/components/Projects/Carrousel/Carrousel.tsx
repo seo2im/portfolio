@@ -5,11 +5,16 @@ import { useCarrousel, useLoad } from '../../../hooks'
 
 type Props = {
     projects: {
-        title: string,
-        description: string,
-        src: string,
+        title: string
+        description: string
+        img: {
+           src: string
+           height: string 
+           top: string
+           left: string
+        }
         url: string,
-        color: string,
+        color: string
     }[]
     width: number
 }

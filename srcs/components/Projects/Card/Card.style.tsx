@@ -27,8 +27,8 @@ export const Wrapper = styled.div<{ hover: boolean, isMove: boolean }>`
     height: 35rem;
     border-radius: 17.5rem;
 `
-export const Img = styled.img`
-
+export const Img = styled.img<{ height: string, top: string, left: string }>`
+    height: 100%;
 `
 export const TextWrapper = styled.div`
     overflow: hidden;
