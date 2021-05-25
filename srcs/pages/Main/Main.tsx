@@ -25,12 +25,10 @@ const Main: React.FC<Props> = ({ setPage }) => {
             </main.Section>
             <main.Bottom>
                 <Link
-                    srcs={source.public.gitlogo}
-                    text={config.main.git.text}
+                    {...config.main.git}
                     linker={() => window.location.href = 'https://github.com/seo2im'}/>
                 <Link
-                    srcs={source.public.logo}
-                    text={config.main.myProject.text}
+                    {...config.main.myProject}
                     linker={() => setPage(1)}/>
             </main.Bottom>
         </main.Layout>
