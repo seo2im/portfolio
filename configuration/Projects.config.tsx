@@ -11,7 +11,8 @@ const projects = [
             left: '120px',
         },
         url: '/project/0',
-        color: '#adeef1'
+        color: '#adeef1',
+        git: 'https://github.com/seo2im/BLER-APP',
     },{
         title: 'Matching 42',
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',

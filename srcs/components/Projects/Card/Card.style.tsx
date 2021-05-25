@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Layout = styled.div<{ color: string }>`
     position: relative;
@@ -33,7 +34,6 @@ export const Img = styled.img<{ height: string, top: string, left: string }>`
     position: relative;
     top: ${({ top }) => top};
     left: ${({ left }) => left};
-
 `
 export const TextWrapper = styled.div`
     overflow: hidden;
@@ -62,4 +62,11 @@ export const Description = styled.div<{ hover: boolean, isMove: boolean }>`
 
     transition: transform 0.5s;
     transform: translate(0, ${({ hover, isMove }) => hover && !isMove ? '10' : '100'}px);
+`
+export const Linker = styled(Link)`
+    color: black;
+
+    &:focus: {
+        color: black;
+    }
 `

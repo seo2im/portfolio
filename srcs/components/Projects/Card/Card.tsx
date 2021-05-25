@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import * as card from './Card.style'
-import { Link } from 'react-router-dom'
 
 type Props = {
     title: string
@@ -19,7 +18,7 @@ const Card: React.FC<Props> = ({ title, description, img, url, color, isMove }) 
     const [hover, setHover] = useState<boolean>(false)
 
     return (
-        <Link to={url}>
+        <card.Linker to={url}>
             <card.Layout onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)} color={color}>
                 <card.Wrapper hover={hover} isMove={isMove}>
                     <card.Img {...img} />
@@ -29,7 +28,7 @@ const Card: React.FC<Props> = ({ title, description, img, url, color, isMove }) 
                     <card.Description hover={hover} isMove={isMove}>{description}</card.Description>
                 </card.TextWrapper>
             </card.Layout>
-        </Link>
+        </card.Linker>
     )
 }
 
