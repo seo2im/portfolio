@@ -6,7 +6,7 @@ import { Nav } from '../components'
 import config from '../../configuration'
 
 const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) => void, boolean] => {
-    const [idx, setIdx] = useState<number>(1)
+    const [idx, setIdx] = useState<number>(0)
 
     const pages = [<Main setPage={setIdx} key={'main'}/>, <Projects key={'projects'}/>]
     const [page, setPage] = useState<JSX.Element>(pages[idx])
