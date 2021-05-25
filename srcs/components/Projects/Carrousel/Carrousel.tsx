@@ -7,7 +7,7 @@ type Props = {
     projects: {
         title: string,
         description: string,
-        srcs: string,
+        src: string,
         url: string,
         color: string,
     }[]

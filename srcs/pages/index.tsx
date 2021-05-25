@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Main from './Main/Main'
 import Projects from './Projects/Projects'
 import styled from 'styled-components'

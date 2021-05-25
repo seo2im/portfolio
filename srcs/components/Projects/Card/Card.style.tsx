@@ -16,6 +16,8 @@ export const Layout = styled.div<{ color: string }>`
 `
 export const Wrapper = styled.div<{ hover: boolean, isMove: boolean }>`
     background-color: white;
+
+    overflow: hidden;
     
     position: relative;
     left: -5rem;
@@ -24,6 +26,9 @@ export const Wrapper = styled.div<{ hover: boolean, isMove: boolean }>`
     width: 35rem;
     height: 35rem;
     border-radius: 17.5rem;
+`
+export const Img = styled.img`
+
 `
 export const TextWrapper = styled.div`
     overflow: hidden;
