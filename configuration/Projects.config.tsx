@@ -13,6 +13,7 @@ const projects = [
         url: '/project/0',
         color: '#adeef1',
         git: 'https://github.com/seo2im/BLER-APP',
+        gif: [ source.projects.bler.signin, source.projects.bler.show ]
     },{
         title: 'Matching 42',
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',
@@ -23,7 +24,8 @@ const projects = [
             left: '0px',
         },
         url: '/project/1',
-        color: '#ffcfb0'
+        color: '#ffcfb0',
+        git: 'https://github.com/Matching42',
     },{
         title: 'Static 42',
         description: '42 Seoul의 각종 통계정보를 그릴 수 있는 opensource 플랫폼 제작',
@@ -34,7 +36,8 @@ const projects = [
             left: '20px',
         },
         url: '/project/3',
-        color: '#c0f2a1'
+        color: '#c0f2a1',
+        git: 'https://github.com/seo2im/42Static',
     },{
         title: 'make Porfolio',
         description: '나의 포트폴리오를 기획, 디자인, 개발 모든것을 처리해보자',

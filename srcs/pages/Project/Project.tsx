@@ -1,6 +1,6 @@
 import React from 'react'
 import * as proj from './Project.style'
-import { Link } from '../../components'
+import { Head } from '../../components'
 import { RouteComponentProps } from 'react-router-dom'
 import config from '../../../configuration'
 
@@ -9,11 +9,14 @@ type Prop = {
 }
 
 const Project: React.FC<RouteComponentProps<Prop>> = ({ match }) => {
-    const { git } = config.projects[match.params.id]
+    const { title, git, gif } = config.projects[match.params.id]
     
     return (
         <proj.Layout>
-            <Link {...config.main.git} linker={() => window.location.href = git}/>
+            <proj.Section>
+                <Head title={title} git={git} gif={gif}/>
+                <proj.Content />
+            </proj.Section>
         </proj.Layout>
     )
 }

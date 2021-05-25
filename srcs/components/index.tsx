@@ -13,7 +13,11 @@ export { default as Title } from './Main/Title/Title'
 export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'
 /*
-    Project
+    Projects
 */
 export { default as Card } from './Projects/Card/Card'
 export { default as Carrousel } from './Projects/Carrousel/Carrousel'
+/*
+    Project
+*/
+export { default as Head } from './Project/Head/Head'
