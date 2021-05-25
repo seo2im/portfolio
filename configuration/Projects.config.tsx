@@ -8,7 +8,7 @@ const projects = [
             src: source.projects.bler.main,
             height: '100%',
             top: '10px',
-            left: '20px',
+            left: '120px',
         },
         url: '',
         color: '#adeef1'
@@ -17,9 +17,9 @@ const projects = [
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',
         img: {
             src: source.projects.matching42.check,
-            height: '100%',
-            top: '10px',
-            left: '20px',
+            height: '70%',
+            top: '150px',
+            left: '0px',
         },
         url: '',
         color: '#ffcfb0'
