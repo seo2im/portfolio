@@ -20,7 +20,7 @@ module.exports = {
                 loader: 'awesome-typescript-loader',
             },
             {
-                test: /\.png$/,
+                test: /\.(png|svg)$/,
                 loader: 'url-loader'
             }
         ]
