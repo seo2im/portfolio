@@ -18,6 +18,8 @@ export const GIF_Wrapper = styled.div`
     margin: auto;
     margin-top: 3rem;
     padding: 2rem 2rem;
+    
+    border-radius: 2rem;
 
     background : black;
 `

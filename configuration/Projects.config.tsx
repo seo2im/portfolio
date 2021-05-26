@@ -19,7 +19,52 @@ const projects = [
         },{
             src: source.projects.bler.show,
             height: '40rem',
-        }]
+        }],
+        content: {
+            spec:
+            [
+                source.spec.ts,
+                source.spec.reactNative,
+                source.spec.redux,
+                source.spec.reduxSaga,
+                source.spec.axios,
+            ],
+            works:
+            [
+                {
+                    title: '디자인 및 설계',
+                    columm:
+                    [
+                        {
+                            explain: '프로그램 다이어그램 구축',
+                            link: ''
+                        },
+                        {
+                            explain: '전체 디자인 구성',
+                            link: '',
+                        }
+                    ]
+                },
+                {
+                    title: 'React Native 환경 개발',
+                    columm:
+                    [
+                        {
+                            explain: 'axios를 통한 비동기 구현',
+                            link: '',
+                        },
+                        {
+                            explain: 'redux 비동기 액션을 하나의 모듈 라이브러리화',
+                            link: '',
+                        },
+                        {
+                            explain: 'redux-saga와 react-redux를 redux패턴 구현',
+                            link: '',
+                        }
+                    ],
+                }
+            ]
+        }
     },{
         title: 'Matching 42',
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',

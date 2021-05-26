@@ -9,10 +9,11 @@ export const Section = styled.div`
     max-width: 70rem;
     min-width: 40rem;
 
-    margin: auto;
+    margin: 15rem auto;
     margin-top: 15rem;
+
     
-    padding: 0 5rem 0 5rem;
+    padding: 0 5rem 15rem 5rem;
 
     background: white;
     overflow: auto;

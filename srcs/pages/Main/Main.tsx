@@ -22,7 +22,7 @@ const Main: React.FC<Props> = ({ setPage }) => {
                 <DragItem initTop={200} initLeft={220} offsetX={300}>
                     <Postit width={500} height={500} postId={config.main.spec.postId}>
                         <Title size={'large'}>{config.main.spec.title}</Title>
-                        <ImageGrid height={80} srcs={config.main.spec.srcs} />
+                        <ImageGrid height={80} srcs={config.main.spec.srcs} color={'black'}/>
                     </Postit>
                 </DragItem>
 

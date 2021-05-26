@@ -16,12 +16,16 @@ import react from './react.png'
 import reactNative from './react-native.png'
 import redux from './redux.png'
 import ts from './ts.png'
+import reduxSaga from './reduxSaga.png'
+import axios from './axios.png'
 
 
 export default {
     public: { gitlogo, logo, board, },
     spec: {
-        apollo, express, gql, js, mongo, next, react, reactNative, redux, ts
+        apollo, express, gql, js,
+        mongo, next, react, reactNative, redux,
+        ts, reduxSaga, axios
     },
     projects: {
         bler, matching42, static42,
