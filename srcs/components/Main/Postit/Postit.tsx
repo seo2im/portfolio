@@ -2,7 +2,6 @@ import React from 'react'
 import * as postit from './Postit.style'
 
 type Props = {
-    title: string
     postId: number
     width: number
     height: number
