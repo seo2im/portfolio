@@ -1,30 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
+import * as background from './Background.style'
 
-const Layout = styled.div<{ width: number, top?: number, left?: number }>`
-    position: absolute;
-    top: ${({ top }) => top? top : 0}px;
-    left: ${({ left }) => left? left : 0}px;
-
-    width: ${({ width }) => width}px;
-
-    z-index: -99;
-`
-const Back = styled.img`
-    width: 100%;
-    height: 100%;
-`
 type Props = {
-    src?: string
-    width: number
     top?: number
     left?: number
+    width?: string
+    height?: string
+    src?: string
 }
-const Background: React.FC<Props> = ({ src, width, top, left }) => {
+const Background: React.FC<Props> = ({ top, left, src, width, height }) => {
     return (
-        <Layout width={width} top={top} left={left}>
-            <Back src={src} />
-        </Layout>
+        <background.Layout top={top} left={left} width={width} height={height}>
+            {src? <background.Back src={src} /> : null}
+        </background.Layout>
     )
 }
 

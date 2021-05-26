@@ -10,11 +10,11 @@ export const Section = styled.div`
     margin-top: 100%;
     margin-left: 2.5rem;
 `
-export const Menu = styled.div<{ select: boolean, page: number }>`
+export const Menu = styled.div<{ select: boolean }>`
     margin-top: 1rem;
 
     font-size: 1.5rem;
-    color: ${({ select, page }) => select? 'blue' : page === 0 ? 'black' : 'white'};
+    color: ${({ select }) => select? 'blue' : 'white'};
 `
 export const Logo = styled.img`
     position: relative;
