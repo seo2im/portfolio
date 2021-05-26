@@ -1,31 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import Main from './Main/Main'
-import Projects from './Projects/Projects'
+import React from 'react'
 import Project from './Project/Project'
 import styled from 'styled-components'
 import { Nav, Background } from '../components'
 import config from '../../configuration'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) => void, boolean] => {
-    const [idx, setIdx] = useState<number>(0)
-
-    const pages = [<Main setPage={setIdx} key={'main'}/>, <Projects key={'projects'}/>]
-    const [page, setPage] = useState<JSX.Element>(pages[idx])
-
-    const [isOut, setIsOut] = useState<boolean>(true)
-
-    useEffect(() => {
-        setIsOut(isOut => !isOut)
-    }, [idx])
-
-    const changePage = (idx) => {
-        setPage(pages[idx])
-        setIsOut(false)
-    }
-
-    return [page, changePage, idx, setIdx, isOut]
-}
+import usePage from './usePage'
 
 const Lobby: React.FC = () => {
     const [page, changePage, idx, setIdx, isOut] = usePage()
