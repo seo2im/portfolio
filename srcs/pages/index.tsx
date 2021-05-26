@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import usePage from './usePage'
 
 const Lobby: React.FC = () => {
+
     const [page, changePage, idx, setIdx, isOut] = usePage()
 
     return (
