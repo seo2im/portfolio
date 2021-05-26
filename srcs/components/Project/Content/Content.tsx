@@ -6,7 +6,7 @@ type Prop = {
     spec: string[]
     works: {
         title: string
-        columm: {
+        column: {
             explain: string
             link: string
         }[]
@@ -27,7 +27,7 @@ const Content: React.FC<Prop> = ({ spec, works }) => {
                             <cont.ExplainTitle>
                                 {work.title}
                             </cont.ExplainTitle>
-                            {work.columm.map((ex, j) => (
+                            {work.column.map((ex, j) => (
                                 <cont.Explain key={`ex_${j}`}>
                                     {ex.explain}
                                 </cont.Explain>

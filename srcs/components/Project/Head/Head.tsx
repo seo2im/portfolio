@@ -14,6 +14,8 @@ type Props = {
     }[]
 }
 const Head: React.FC<Props> = ({ title, git, gifs, description }) => {
+    console.log(title)
+    console.log(gifs)
     return (
         <head.Layout>
             <head.Title>{title}</head.Title>

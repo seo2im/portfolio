@@ -39,12 +39,12 @@ export const Title = styled.div`
 export const ExplainTitle = styled.div`
     font-size: 2.3rem;
 
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
 `
 export const Explain = styled.div`
     color: grey;
     
     font-size: 1.5rem;
-    margin-left: 1.5rem;
+    margin: 0.5rem 2rem;
 `
