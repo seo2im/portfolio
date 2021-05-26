@@ -18,6 +18,15 @@ jobs:
         with:
           node-version: 12.18.3
 
+      - name: make deploy keys
+        env:
+          GH_ACTION_DEPLOY_KEY: ${{ secrets.GH_ACTION_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: npm install #set dependency
         run: |
           cd portfolio
@@ -30,7 +39,7 @@ jobs:
           USER_NAME: ${{ github.event.pusher.name }}
           USER_EMAIL: ${{ github.event.pusher.email }}
         run: |
-          git clone -b deployment --single-branch https://github.com/seo2im/portfolio.git deployment
+          git clone -b deployment --single-branch git@github.com:seo2im/portfolio.git deployment
           rm -rf ./deployment/*
           mv ./portfolio/* ./deployment/
           cd deployment
