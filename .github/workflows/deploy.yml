@@ -36,9 +36,11 @@ jobs:
 
       - name: push
         env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
           USER_NAME: ${{ github.event.pusher.name }}
           USER_EMAIL: ${{ github.event.pusher.email }}
         run: |
+          echo "$GITHUB_CONTEXT"
           git clone -b deployment --single-branch git@github.com:seo2im/portfolio.git deployment
           rm -rf ./deployment/*
           mv ./portfolio/* ./deployment/
