@@ -22,6 +22,7 @@ jobs:
         run: |
           cd portfolio
           npm install
+          npm audit fix
           npm run build
 
       - name: push
@@ -29,7 +30,7 @@ jobs:
           USER_NAME: ${{ github.event.pusher.name }}
           USER_EMAIL: ${{ github.event.pusher.email }}
         run: |
-          git clone -b deployment --single-branch https://github.com/seo2im/portfolio.git
+          git clone -b deployment --single-branch https://github.com/seo2im/portfolio.git deployment
           rm -rf ./deployment/*
           mv ./portfolio/* ./deployment
           cd deployment
