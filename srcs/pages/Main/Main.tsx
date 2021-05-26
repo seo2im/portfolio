@@ -1,6 +1,6 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Postit, Link, DragItem, Description, ImageGrid } from '../../components'
+import { Postit, Link, DragItem, Description, ImageGrid, Career } from '../../components'
 import config from '../../../configuration'
 import { Title } from '../../components/Main/Title/Title.style'
 
@@ -12,12 +12,7 @@ const Main: React.FC<Props> = ({ setPage }) => {
         <main.Layout>
             <main.Section>
                 
-                <DragItem initTop={0} initLeft={0} offsetX={300}>
-                    <Postit width={500} height={500} {...config.main.introduce}>
-                        <Title size={'large'}>W</Title>
-                        <Description content={"text"}/>
-                    </Postit>
-                </DragItem>
+                <Career />
 
                 <DragItem initTop={200} initLeft={220} offsetX={300}>
                     <Postit width={500} height={500} postId={config.main.spec.postId}>
@@ -40,16 +35,3 @@ const Main: React.FC<Props> = ({ setPage }) => {
 }
 
 export default Main
-
-/*
-<main.Left>
-                    <Postit {...config.main.introduce} size='large' />
-                    <Postit {...config.main.career} size='large' />
-                </main.Left>
-                <main.Right>
-                    <Title title={config.main.objects.title} size={'large'}/>
-                    {config.main.objects.object.map((obj, i) => (
-                        <Postit {...obj} size='middle' key={`obj_${i}`} />
-                    ))}
-                </main.Right>
-*/

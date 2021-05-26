@@ -10,7 +10,7 @@ export { default as DragItem } from './publics/Dragable/DragItem'
 /*
     Main
 */
-export { default as Postit } from './Main/Postit/Postit'
+export { default as Postit } from './publics/Postit/Postit'
 export { default as Title } from './Main/Title/Title'
 export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'
