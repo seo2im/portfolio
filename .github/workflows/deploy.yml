@@ -1,41 +1,50 @@
-name: deploy app
-on: 
-  push:
-    branches:
-      - master
+# name: deploy app
+# on: 
+#   push:
+#     branches:
+#       - master
   
-jobs:
-  build:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: checkout code #get repo file
-        uses: actions/checkout@master
-        with:
-          path: portfolio
+# jobs:
+#   build:
+#     runs-on: ubuntu-18.04
+#     steps:
+#       - name: checkout code #get repo file
+#         uses: actions/checkout@master
+#         with:
+#           path: portfolio
       
-      - name: checkout node
-        uses: actions/setup-node@master
-        with:
-          node-version: 12.18.3
+#       - name: checkout node
+#         uses: actions/setup-node@master
+#         with:
+#           node-version: 12.18.3
 
-      - name: npm install #set dependency
-        run: |
-          cd portfolio
-          npm install
-          npm run build
+#       - name: git config
+#         env:
+#           USER_NAME: ${{ github.event.pusher.name }}
+#           USER_EMAIL: ${{ github.event.pusher.email }}
+#         run: |
+#           git config --global user.email "$USER_EMAIL"
+#           git config --global user.name "$USER_NAME"
 
-      - name: push
-        env:
-          USER_NAME: ${{ github.event.pusher.name }}
-          USER_EMAIL: ${{ github.event.pusher.email }}
-        run: |
-          git clone -b deployment --single-branch https://github.com/seo2im/portfolio.git
-          rm -rf ./deployment/*
-          mv ./portfolio/* ./deployment
-          cd deployment
-          git config --global user.email "$USER_EMAIL"
-          git config --global user.name "$USER_NAME"
-          git add .
-          git commit -m "deploy: deployment"
-          git push origin deployment
+#       - name: install key
+#         env:
+#           GH_ACTION_DEPLOY_KEY: ${{ secrets.GH_ACTION_DEPLOY_KEY }}
+#         run: |
+#           mkdir -p ~/.ssh/
+#           echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+#           chmod 600 ~/.ssh/id_rsa
+#           ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+#       - name: npm install #set dependency
+#         run: |
+#           cd portfolio
+#           npm install
+#           npm run build
+
+#       - name: push
+#         run: |
+#           git checkout origin master
+#           git add .
+#           git commit -m "feat:deployment"
+#           git push origin master
 

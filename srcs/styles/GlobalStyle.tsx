@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'TmoneyRoundWindExtraBold';
         margin: 0;
         padding: 0;
-        user-select: none;
     }
 `
 
