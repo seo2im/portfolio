@@ -1,4 +1,4 @@
-    import styled from 'styled-components'
+import styled from 'styled-components'
 
 export const Back = styled.div<{ postId: number, width: number, height: number }>`
     width: ${({ width }) => width}px;

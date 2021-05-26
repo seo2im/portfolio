@@ -1,6 +1,6 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Postit, Link, DragItem, Description } from '../../components'
+import { Postit, Link, DragItem, Description, ImageGrid } from '../../components'
 import config from '../../../configuration'
 import { Title } from '../../components/Main/Title/Title.style'
 
@@ -12,12 +12,20 @@ const Main: React.FC<Props> = ({ setPage }) => {
         <main.Layout>
             <main.Section>
                 
-                <DragItem initTop={200} initLeft={220} offsetX={300}>
+                <DragItem initTop={0} initLeft={0} offsetX={300}>
                     <Postit width={500} height={500} {...config.main.introduce}>
                         <Title size={'large'}>W</Title>
                         <Description content={"text"}/>
                     </Postit>
                 </DragItem>
+
+                <DragItem initTop={200} initLeft={220} offsetX={300}>
+                    <Postit width={500} height={500} postId={config.main.spec.postId}>
+                        <Title size={'large'}>{config.main.spec.title}</Title>
+                        <ImageGrid height={80} srcs={config.main.spec.srcs} />
+                    </Postit>
+                </DragItem>
+
             </main.Section>
             <main.Bottom>
                 <Link
