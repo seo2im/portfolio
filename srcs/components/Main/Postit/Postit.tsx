@@ -1,30 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import * as postit from './Postit.style'
-import { Title, Description, Career } from '../..'
 
 type Props = {
     title: string
-    description?: string
-    careers?: {
-        date: string
-        content: string
-    }[]
-    size: 'large' | 'middle'
     postId: number
     width: number
     height: number
 }
-const Postit: React.FC<Props> = ({ title, description, careers, size, postId, width, height }) => {
-    const [hover, setHover] = useState<boolean>(false)
+const Postit: React.FC<Props> = ({ children, postId, width, height }) => {
     return (
-        <postit.Back 
-            width={width} height={height}
-            postId={postId} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+        <postit.Back width={width} height={height} postId={postId}>
             <postit.Post width={width} height={height} postId={postId}>
                 <postit.ContentWrapper postId={postId}>
-                    <Title title={title} size={size} />
-                    {description ? <Description hover={hover} content={description} /> : null}
-                    {careers ? <Career careers={careers} /> : null}
+                    {children}
                 </postit.ContentWrapper>
             </postit.Post>
         </postit.Back>

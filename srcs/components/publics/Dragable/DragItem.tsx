@@ -14,7 +14,7 @@ const DragItem: React.FC<Props> = ({ children, initTop, initLeft, offsetX, offse
     const ref = useRef<HTMLDivElement>(null)
 
     const mouseDown = (e: React.MouseEvent) => {
-        if (!ref.current) return
+        if (!ref.current) return        
 
         const shiftX = e.clientX - ref.current.getBoundingClientRect().left + (offsetX ? offsetX : 0);
         const shiftY = e.clientY - ref.current.getBoundingClientRect().top + (offsetY ? offsetY : 0);

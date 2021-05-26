@@ -1,22 +1,22 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Postit, Link, DragItem } from '../../components'
+import { Postit, Link, DragItem, Description } from '../../components'
 import config from '../../../configuration'
+import { Title } from '../../components/Main/Title/Title.style'
 
 type Props = {
     setPage: (page: number) => void
 }
-const Main: React.FC<Props> = ({ setPage }) => {
-
-    const drop = (e: React.DragEvent) => {
-        e.preventDefault()
-    }
-
+const Main: React.FC<Props> = ({ setPage }) => {    
     return (
         <main.Layout>
-            <main.Section onDrop={drop} onDragOver={(e) => e.preventDefault()}>
-                <DragItem initTop={0} initLeft={0} offsetX={300}>
-                    <Postit  width={500} height={500} {...config.main.introduce} size='large'/>
+            <main.Section>
+                
+                <DragItem initTop={200} initLeft={220} offsetX={300}>
+                    <Postit width={500} height={500} {...config.main.introduce}>
+                        <Title size={'large'}>W</Title>
+                        <Description content={"text"}/>
+                    </Postit>
                 </DragItem>
             </main.Section>
             <main.Bottom>
