@@ -1,17 +1,18 @@
 import source from '../public'
 
 const main = {
+    background: source.public.board,
     introduce: {
         title: 'Who Am I?',
         description: '2년동안 AI를 공부하다가 잠깐 접한 웹 개발에서 \
             내가 진정 즐거워하는 것을 깨닿고 개발에 길에 접어든 주니어 프론트 개발자입니다. \
             언제나 기술적으로 파고드는 것을 좋아하고 새로운 협업방식에 항상 굶주려 있습니다',
         postId: 0,
+        initTop: 50,
+        initLeft: 200,
     },
-        
-    
     spec: {
-        title: 'Who Am I?',
+        title: '다루는 기술',
         srcs:
         [
             source.spec.js,
@@ -25,7 +26,9 @@ const main = {
             source.spec.apollo,
             source.spec.gql,
         ],
-        postId: 1
+        postId: 1,
+        initTop: 100,
+        initLeft: 50,
     },
     career: {
         title: '경력',
@@ -43,6 +46,8 @@ const main = {
             content: '42 Seoul 수강 중',
         }],
         postId: 1,
+        initTop: 100,
+        initLeft: 50,
     },
     objects: {
         title: '어떤 개발을 목표로 하는가?',
@@ -68,14 +73,20 @@ const main = {
             postId: 4,
         }]
     },
-    git: {
-        srcs: source.public.gitlogo,
-        text: 'go to Github!',
+    link: {
+        title: 'My Page Link',
+        git: {
+            srcs: source.public.gitlogo,
+            text: 'go to Github!',
+        },
+        myProject: {
+            srcs: source.public.logo,
+            text: 'go to My Project',
+        },
+        postId: 3,
+        initTop: 200,
+        initLeft: 200,
     },
-    myProject: {
-        srcs: source.public.logo,
-        text: 'go to My Project',
-    }
 }
 
 export default main

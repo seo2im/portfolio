@@ -1,15 +1,14 @@
 import React from 'react'
 import * as career from './Career.style'
-import { Postit, DragItem } from '../..'
+import { Postit, DragItem, Title } from '../..'
 import config from '../../../../configuration'
-import { Title } from '../../'
 
 const Career: React.FC = () => {
-    const { careers, title, postId } = config.main.career
+    const { careers, title, postId, initTop, initLeft } = config.main.career
 
     return (
-        <DragItem initTop={0} initLeft={0} offsetX={300}>
-            <Postit width={500} height={500} postId={postId}>
+        <DragItem initTop={initTop} initLeft={initLeft} offsetX={300}>
+            <Postit postId={postId}>
                 <Title size={"large"} title={title} />
                 <career.Layout>
                 {careers.map((car, i) => (

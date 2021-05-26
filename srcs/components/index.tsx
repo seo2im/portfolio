@@ -7,14 +7,16 @@ export { default as Background } from './publics/Background/Background'
 export { default as Link } from './publics/Link/Link'
 export { default as Canvas } from './publics/Canvas/Canvas'
 export { default as DragItem } from './publics/Dragable/DragItem'
+export { default as ImageGrid } from './publics/ImageGrid/ImageGrid'
+export { default as Postit } from './publics/Postit/Postit'
 /*
     Main
 */
-export { default as Postit } from './publics/Postit/Postit'
 export { default as Title } from './Main/Title/Title'
 export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'
-export { default as ImageGrid } from './publics/ImageGrid/ImageGrid'
+export { default as Spec } from './Main/Spec/Spec'
+export { default as Goto } from './Main/Goto/Goto'
 /*
     Projects
 */
