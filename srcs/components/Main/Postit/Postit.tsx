@@ -11,15 +11,18 @@ type Props = {
     }[]
     size: 'large' | 'middle'
     postId: number
+    width: number
     height: number
 }
-const Postit: React.FC<Props> = ({ title, description, careers, size, postId, height }) => {
+const Postit: React.FC<Props> = ({ title, description, careers, size, postId, width, height }) => {
     const [hover, setHover] = useState<boolean>(false)
     return (
-        <postit.Back postId={postId} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
-            <postit.Post postId={postId}>
-                <Title title={title} size={size} />
-                <postit.ContentWrapper postId={postId} height={height}>
+        <postit.Back 
+            width={width} height={height}
+            postId={postId} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+            <postit.Post width={width} height={height} postId={postId}>
+                <postit.ContentWrapper postId={postId}>
+                    <Title title={title} size={size} />
                     {description ? <Description hover={hover} content={description} /> : null}
                     {careers ? <Career careers={careers} /> : null}
                 </postit.ContentWrapper>

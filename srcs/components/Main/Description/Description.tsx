@@ -11,7 +11,7 @@ const Description: React.FC<Props> = ({ content, hover }) => {
 
     return (
         <description.Layout >
-            <TypoText start={8} text={content} trigger={hover} speed={2} cursorOn={true} deleteOff/>
+            <p>{content}</p>
         </description.Layout>
     )
 }

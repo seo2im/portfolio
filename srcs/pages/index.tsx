@@ -8,7 +8,7 @@ import config from '../../configuration'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) => void, boolean] => {
-    const [idx, setIdx] = useState<number>(1)
+    const [idx, setIdx] = useState<number>(0)
 
     const pages = [<Main setPage={setIdx} key={'main'}/>, <Projects key={'projects'}/>]
     const [page, setPage] = useState<JSX.Element>(pages[idx])
@@ -61,7 +61,7 @@ const layout = {
         display: flex;
     `,
     Left : styled.div`
-        width: 20rem;
+        width: 300px;
         z-index: 99;
     `,
     Section: styled.div<{ isOut: boolean }>`
