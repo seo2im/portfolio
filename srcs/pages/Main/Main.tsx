@@ -1,25 +1,23 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Postit, Title, Link } from '../../components'
+import { Postit, Link, DragItem, Description } from '../../components'
 import config from '../../../configuration'
+import { Title } from '../../components/Main/Title/Title.style'
 
 type Props = {
     setPage: (page: number) => void
 }
-const Main: React.FC<Props> = ({ setPage }) => {
+const Main: React.FC<Props> = ({ setPage }) => {    
     return (
         <main.Layout>
             <main.Section>
-                <main.Left>
-                    <Postit {...config.main.introduce} size='large' />
-                    <Postit {...config.main.career} size='large' />
-                </main.Left>
-                <main.Right>
-                    <Title title={config.main.objects.title} size={'large'}/>
-                    {config.main.objects.object.map((obj, i) => (
-                        <Postit {...obj} size='middle' key={`obj_${i}`} />
-                    ))}
-                </main.Right>
+                
+                <DragItem initTop={200} initLeft={220} offsetX={300}>
+                    <Postit width={500} height={500} {...config.main.introduce}>
+                        <Title size={'large'}>W</Title>
+                        <Description content={"text"}/>
+                    </Postit>
+                </DragItem>
             </main.Section>
             <main.Bottom>
                 <Link
@@ -34,3 +32,16 @@ const Main: React.FC<Props> = ({ setPage }) => {
 }
 
 export default Main
+
+/*
+<main.Left>
+                    <Postit {...config.main.introduce} size='large' />
+                    <Postit {...config.main.career} size='large' />
+                </main.Left>
+                <main.Right>
+                    <Title title={config.main.objects.title} size={'large'}/>
+                    {config.main.objects.object.map((obj, i) => (
+                        <Postit {...obj} size='middle' key={`obj_${i}`} />
+                    ))}
+                </main.Right>
+*/
