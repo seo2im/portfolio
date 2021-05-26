@@ -1,8 +1,7 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Postit, Title, Link, Background } from '../../components'
+import { Postit, Title, Link } from '../../components'
 import config from '../../../configuration'
-import source from '../../../public'
 
 type Props = {
     setPage: (page: number) => void
@@ -10,7 +9,6 @@ type Props = {
 const Main: React.FC<Props> = ({ setPage }) => {
     return (
         <main.Layout>
-            <Background src={source.public.board} width={1800} top={-100} left={-210}/>
             <main.Section>
                 <main.Left>
                     <Postit {...config.main.introduce} size='large' />
@@ -25,12 +23,10 @@ const Main: React.FC<Props> = ({ setPage }) => {
             </main.Section>
             <main.Bottom>
                 <Link
-                    srcs={source.public.gitlogo}
-                    text={config.main.git.text}
+                    {...config.main.git}
                     linker={() => window.location.href = 'https://github.com/seo2im'}/>
                 <Link
-                    srcs={source.public.logo}
-                    text={config.main.myProject.text}
+                    {...config.main.myProject}
                     linker={() => setPage(1)}/>
             </main.Bottom>
         </main.Layout>

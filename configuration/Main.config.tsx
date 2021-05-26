@@ -1,3 +1,5 @@
+import source from '../public'
+
 const main = {
     introduce: {
         title: 'Who Am I?',
@@ -53,11 +55,11 @@ const main = {
         }]
     },
     git: {
-        srcs: '',
+        srcs: source.public.gitlogo,
         text: 'go to Github!',
     },
     myProject: {
-        srcs: '',
+        srcs: source.public.logo,
         text: 'go to My Project',
     }
 }

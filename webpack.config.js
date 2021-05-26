@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { getTokenSourceMapRange } = require('typescript')
 
 module.exports = {
     entry: './srcs/app.tsx',
@@ -9,6 +10,7 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.join(__dirname, '/docs'),
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.ts', '.tsx']
@@ -20,14 +22,14 @@ module.exports = {
                 loader: 'awesome-typescript-loader',
             },
             {
-                test: /\.(png|svg)$/,
+                test: /\.(png|svg|gif)$/,
                 loader: 'url-loader'
             }
         ]
     },
     devServer : {
+        port : 4000,
         historyApiFallback : true,
-		port : 4000,
 	},
     plugins: [
         new HtmlWebpackPlugin({

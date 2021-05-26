@@ -10,8 +10,16 @@ const projects = [
             top: '10px',
             left: '120px',
         },
-        url: '',
-        color: '#adeef1'
+        url: '/project/0',
+        color: '#adeef1',
+        git: 'https://github.com/seo2im/BLER-APP',
+        gifs: [{
+            src: source.projects.bler.signin,
+            height: '40rem',
+        },{
+            src: source.projects.bler.show,
+            height: '40rem',
+        }]
     },{
         title: 'Matching 42',
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',
@@ -21,8 +29,9 @@ const projects = [
             top: '150px',
             left: '0px',
         },
-        url: '',
-        color: '#ffcfb0'
+        url: '/project/1',
+        color: '#ffcfb0',
+        git: 'https://github.com/Matching42',
     },{
         title: 'Static 42',
         description: '42 Seoul의 각종 통계정보를 그릴 수 있는 opensource 플랫폼 제작',
@@ -32,8 +41,9 @@ const projects = [
             top: '10px',
             left: '20px',
         },
-        url: '',
-        color: '#c0f2a1'
+        url: '/project/3',
+        color: '#c0f2a1',
+        git: 'https://github.com/seo2im/42Static',
     },{
         title: 'make Porfolio',
         description: '나의 포트폴리오를 기획, 디자인, 개발 모든것을 처리해보자',
@@ -43,7 +53,7 @@ const projects = [
             top: '10px',
             left: '20px',
         },
-        url: '',
+        url: '/project/4',
         color: '#ffed82'
     }
 ]

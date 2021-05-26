@@ -23,8 +23,7 @@ const Nav: React.FC<Props> = ({ contents, page, setPage }) => {
                         <nav.Menu 
                             key={`nav_${i}`}
                             onClick={() => setPage(i)}
-                            select={page === i}
-                            page={page}>
+                            select={page === i}>
                             <TypoText start={2} trigger={hover} text={content.message} speed={40}/>
                         </nav.Menu>
                     )

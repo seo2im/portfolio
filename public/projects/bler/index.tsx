@@ -4,4 +4,7 @@ import log from './log.png'
 import login from './login.png'
 import main from './main.png'
 
-export default { detail, loading, log, login, main }
+import signin from './signin.gif'
+import show from './show.gif'
+
+export default { detail, loading, log, login, main, signin, show }
