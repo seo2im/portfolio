@@ -14,7 +14,7 @@ export { default as Postit } from './Main/Postit/Postit'
 export { default as Title } from './Main/Title/Title'
 export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'
-export { default as ImageGrid } from './Main/ImageGrid/ImageGrid'
+export { default as ImageGrid } from './publics/ImageGrid/ImageGrid'
 /*
     Projects
 */
@@ -24,3 +24,4 @@ export { default as Carrousel } from './Projects/Carrousel/Carrousel'
     Project
 */
 export { default as Head } from './Project/Head/Head'
+export { default as Content } from './Project/Content/Content'

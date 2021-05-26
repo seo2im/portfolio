@@ -14,13 +14,14 @@ type Props = {
     }[]
 }
 const Head: React.FC<Props> = ({ title, git, gifs, description }) => {
+    console.log(title)
+    console.log(gifs)
     return (
         <head.Layout>
             <head.Title>{title}</head.Title>
                 <head.Description_Wrapper>
                 <head.Description>{description}</head.Description>
                     <Link {...config.main.git} linker={() => window.location.href = git}/>
-                    
                 </head.Description_Wrapper>
                 <head.GIF_Wrapper>
                     {gifs.map((gif, i) => <head.GIF key={`gif_${i}`} {...gif}/>)}
