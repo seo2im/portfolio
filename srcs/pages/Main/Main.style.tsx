@@ -5,7 +5,6 @@ import styled from 'styled-components'
 */
 export const Layout = styled.div`
     position: relative;
-    color: white;
 `
 export const Section = styled.div`
     display: flex;
