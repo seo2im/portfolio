@@ -3,7 +3,7 @@ import Main from './Main/Main'
 import Projects from './Projects/Projects'
 
 const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) => void, boolean] => {
-    const [idx, setIdx] = useState<number>(0)
+    const [idx, setIdx] = useState<number>(() => parseInt(window.localStorage.getItem('page') as string) || 0)
     const pages = [<Main setPage={setIdx} key={'main'}/>, <Projects key={'projects'}/>]
     const [page, setPage] = useState<JSX.Element>(pages[idx])
 
@@ -11,6 +11,7 @@ const usePage = (): [JSX.Element, (idx: number) => void ,number, (page:number) =
 
     useEffect(() => {
         setIsOut(isOut => !isOut)
+        window.localStorage.setItem('page', String(idx))
     }, [idx])
 
     const changePage = (idx) => {
