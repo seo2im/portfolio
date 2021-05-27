@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Layout = styled.div`
     position: absolute;
     top: 100px;
-    left: 200px;
+    left: 100px;
 `
 export const Intro = styled.div`
     display: flex;
@@ -12,7 +12,7 @@ export const Intro = styled.div`
 export const Photo = styled.img`
     display: block;
 
-    width: 200px;
+    width: 250px;
     height: 350px;
 `
 export const Info = styled.div`
