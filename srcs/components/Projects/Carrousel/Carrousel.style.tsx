@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Layout = styled.div<{ width: number, load: boolean }>`
+export const Layout = styled.div<{ width: number }>`
     width: 90%;
     height: 80vh;
     

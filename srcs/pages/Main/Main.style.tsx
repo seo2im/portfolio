@@ -5,23 +5,32 @@ import styled from 'styled-components'
 */
 export const Layout = styled.div`
     position: relative;
-    color: white;
-`
-export const Section = styled.div`
-    display: flex;
     
+    color: white;
+    
+    display: flex;
+`
+export const Left = styled.div`
     height: 75vh;
-    width: 85rem;
+    width: 900px;
 
     margin-top: 5rem;
 `
-export const Left = styled.div`
-    width: 45rem;
-    margin-right: 10rem;
+export const SpecWrapper = styled.div`
+    
 `
-export const Right = styled.div`
-    width: 45rem;
+export const IntroWrapper = styled.div`
+
 `
-export const Bottom = styled.div`
-    display: flex;
+export const Wrapper = styled.div<{ isOut: boolean }>`
+    transition: transform 0.5s;
+    transform: translate(${({ isOut }) => isOut ? '1700px, 0' : '0, 0'});
+`
+export const BoardText = styled.div`
+    position: absolute;
+    top: 120px;
+    left: 1250px;
+
+    transform: rotate(30deg);
+    font-size: 2rem;
 `
