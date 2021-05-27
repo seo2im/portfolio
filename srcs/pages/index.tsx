@@ -18,7 +18,10 @@ const Lobby: React.FC = () => {
             <layout.Left>
                 <Nav contents={config.nav.contents} page={idx} setPage={setIdx}/>
             </layout.Left>
-            <layout.Section isOut={isOut} onTransitionEnd={() => changePage(idx)}>
+            <layout.Section isOut={isOut} onTransitionEnd={e => {
+                    e.stopPropagation()
+                    changePage(idx)
+                }}>
                 {page}
             </layout.Section>
         </layout.Grid>

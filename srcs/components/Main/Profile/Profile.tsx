@@ -20,7 +20,8 @@ const Profile: React.FC<Prop> = ({ setIdx, idx }) => {
                         <profile.subInfoText>{birth}</profile.subInfoText>
                         <profile.subInfoText>{email}</profile.subInfoText>                
                     </profile.subInfo>
-                    <Link {...page} linker={() => setIdx(1 - idx)} /> 
+                    <Link {...page} 
+                        linker={() => setIdx(1 - idx)} /> 
                 </profile.Info>
             </profile.Intro>
             <profile.History>

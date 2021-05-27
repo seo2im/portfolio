@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-type Fc = (time: number, contents: any[], showed: number) => [number, (move: number) => void, number, () => void, boolean, any[]]
+type Fc = (time: number, contents: any[], showed: number) => [number, (move: number) => void, number, (e: React.TransitionEvent) => void, boolean, any[]]
 const useCarrousel: Fc = (time, contents, showed) => {
     const [idx, setIdx] = useState<number>(1)
     const [isMove, setIsMove] = useState<boolean>(false)
@@ -23,7 +23,8 @@ const useCarrousel: Fc = (time, contents, showed) => {
         return items
     }
 
-    const transitionEnd = () => {
+    const transitionEnd = (e: React.TransitionEvent) => {
+        e.stopPropagation()
         setIsMove(false)
         if (idx === 0) {
             setDuration(0)
