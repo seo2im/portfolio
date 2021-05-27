@@ -17,6 +17,7 @@ export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'
 export { default as Spec } from './Main/Spec/Spec'
 export { default as Goto } from './Main/Goto/Goto'
+export { default as NormalPost } from './Main/NormalPost/NormalPost'
 /*
     Projects
 */

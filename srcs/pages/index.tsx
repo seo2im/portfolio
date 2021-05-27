@@ -47,6 +47,6 @@ const layout = {
         width: calc(100% - 20rem);
 
         transition: transform 1s;
-        transform: translate(${({ isOut }) => isOut ? '2000px, 0' : '0, 0'});
+        transform: translate(${({ isOut }) => isOut ? '1700px, 0' : '0, 0'});
     `
 }

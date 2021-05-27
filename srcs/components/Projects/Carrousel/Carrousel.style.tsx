@@ -9,9 +9,6 @@ export const Layout = styled.div<{ width: number, load: boolean }>`
     overflow: hidden;
 
     position: relative;
-    
-    transition: transform 2s ease-out;
-    transform:translate(${({ load }) => load ? '0, 0' : '3000px, 0'});
 `
 export const Slide = styled.div<{ width: number, num: number, idx: number, duration: number }>`
     display: flex;

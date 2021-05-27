@@ -1,11 +1,15 @@
 import React from 'react'
 import * as spec from './Spec.style'
 import { DragItem, Postit, Title, ImageGrid } from '../..'
-import config from '../../../../configuration'
 
-const Spec: React.FC = () => {
-    const { title, srcs, postId, initTop, initLeft } = config.main.spec
-
+type Prop = {
+    title: string
+    srcs: string[]
+    postId: number
+    initTop: number
+    initLeft: number
+}
+const Spec: React.FC<Prop> = ({ title, srcs, postId, initTop, initLeft }) => {
     return (
         <DragItem initTop={initTop} initLeft={initLeft} offsetX={300}>
             <Postit postId={postId}>

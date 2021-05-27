@@ -2,17 +2,33 @@ import source from '../public'
 
 const main = {
     background: source.public.board,
-    introduce: {
-        title: 'Who Am I?',
-        description: '2년동안 AI를 공부하다가 잠깐 접한 웹 개발에서 \
-            내가 진정 즐거워하는 것을 깨닿고 개발에 길에 접어든 주니어 프론트 개발자입니다. \
-            언제나 기술적으로 파고드는 것을 좋아하고 새로운 협업방식에 항상 굶주려 있습니다',
-        postId: 0,
-        initTop: 50,
-        initLeft: 200,
-    },
-    spec: {
-        title: '다루는 기술',
+    introduces:
+    [
+        {
+            description: '좋은 코드는 재사용성이 높게 구조화된 코드라 생각하고 \
+                언제나 코드의 재사용성을 높이기 위해 노력합니다.',
+            postId: 0,
+            initTop: 50,
+            initLeft: 200,
+        },
+        {
+            description: '협업에서 불필요한 프로세스를 개선하고 \
+                효율적인 워크플로우를 만드는 것을 좋아합니다. \
+                적극적인 소통과 가이드를 통한 개발 프로세스를 구조화하려 노력합니다.',
+            postId: 0,
+            initTop: 50,
+            initLeft: 200,
+        },
+        {
+            description: '새로운 기술을 익히는 것 뿐만 아니라 레거시한 기술또한 중요하게 생각합니다. \
+                항상 만들고 있는 코드를 이해하고 적용하려 노력합니다.',
+            postId: 0,
+            initTop: 50,
+            initLeft: 200,
+        }
+    ],
+    frontSpec: {
+        title: 'front SKILL',
         srcs:
         [
             source.spec.js,
@@ -21,12 +37,21 @@ const main = {
             source.spec.reactNative,
             source.spec.redux,
             source.spec.next,
-            source.spec.express,
-            source.spec.mongo,
-            source.spec.apollo,
-            source.spec.gql,
         ],
         postId: 1,
+        initTop: 100,
+        initLeft: 50,
+    },
+    backSpec: {
+        title: 'etc SKILL',
+        srcs:
+        [
+            source.spec.express,
+            source.spec.mongo,
+            source.spec.gql,
+            source.spec.apollo,
+        ],
+        postId: 4,
         initTop: 100,
         initLeft: 50,
     },
@@ -50,28 +75,9 @@ const main = {
         initLeft: 50,
     },
     objects: {
-        title: '어떤 개발을 목표로 하는가?',
-        object: [{
-            title: '협업 flow 중시',
-            description: '언제나 협업을 할 때 원활한 소통을 위한 방법을 고려하고 \
-            적합한 flow를 적용하며 항상 flow에 대한 문서를 작성합니다 \
-            협업 Flow의 최종 목표는 서로 카톡을 하지 않고 모든 업무를 \
-            할 수 있게하는것이라 생각하며 항상 고민하고 고민합니다',
-            postId: 2,
-        },{
-            title: '유지 보수가 쉬운 개발',
-            description: '"누군가는 작업수정을 30분만에 할 수 있고 누군가는 3일이 걸린다" \
-            이는 능력의 차이가 아닌 얼마나 유지보수가 쉽도록 디자인을 했나에 걸려있습니다. \
-            새로운 요청과 수정에 쉽게 대응하고 변화시킬 수 있는 디자인을 중시합니다',
-            postId: 3,
-        },{
-            title: 'Reactable한 개발',
-            description: '프론트는 사용자와 가장 가까운 위치에서 사용자의 반응과 \
-            결과를 직접적으로 받고 전달합니다 \
-            모든 동작과 행위, 디자인은 사용자를 대상으로 멋진 경험을 \
-            시켜줄 수 있도록 해야 합니다',
-            postId: 4,
-        }]
+        title: 
+        '새로운 기술뿐만 아니라 레거시한 기술또한 그 중요성을 인지하고 학습하는것을 좋아하며 \
+        '
     },
     link: {
         title: 'My Page Link',

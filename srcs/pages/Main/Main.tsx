@@ -1,6 +1,6 @@
 import React from 'react'
 import * as main from './Main.style'
-import { Career, Spec, Goto, Background } from '../../components'
+import { Spec, Goto, Background, NormalPost } from '../../components'
 import config from '../../../configuration'
 
 type Props = {
@@ -13,8 +13,11 @@ const Main: React.FC<Props> = ({ setPage }) => {
                 top={-10} left={-250}
                 width={'110%'} height={'110%'}/> 
             <main.Section>
-                <Career />
-                <Spec />
+                <Spec {...config.main.backSpec}/>
+                <Spec {...config.main.frontSpec}/>
+                {config.main.introduces.map((introduce, i) => (
+                    <NormalPost key={`intro_${i}`} {...introduce} />
+                ))}
                 <Goto setPage={setPage} />
             </main.Section>
         </main.Layout>
