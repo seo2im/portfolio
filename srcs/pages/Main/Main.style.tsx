@@ -5,16 +5,41 @@ import styled from 'styled-components'
 */
 export const Layout = styled.div`
     position: relative;
-    
     color: white;
+`
+export const Section = styled.div`
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    height: 870px;
+    width: 1477px;
+`
+export const Nav = styled.div`
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-around;
     
+    font-size: 1.5rem;
+
+    margin-top: 1rem;
+`
+export const Bottom = styled.div`
     display: flex;
 `
-export const Left = styled.div`
+export const NavItem = styled.div<{ isSelect: boolean }>`
+    text-decoration ${({ isSelect }) => isSelect ? 'underline' : 'none'};
+`
+export const BottomLeft = styled.div`
     height: 75vh;
     width: 900px;
 
     margin-top: 5rem;
+`
+export const BottomRight = styled.div`
+    
 `
 export const Wrapper = styled.div<{ isOut: boolean }>`
     transition: transform 0.5s;
