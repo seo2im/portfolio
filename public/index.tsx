@@ -1,6 +1,6 @@
 import gitlogo from './git.png'
 import logo from './logo.png'
-import board from './board.svg'
+import board from './board.png'
 
 import bler from './projects/bler'
 import matching42 from './projects/matching42'

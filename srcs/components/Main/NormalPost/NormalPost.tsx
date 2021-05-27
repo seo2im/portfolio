@@ -7,11 +7,13 @@ type Prop = {
     postId: number
     initTop: number
     initLeft: number
+    width?: number
+    height?: number
 }
-const NormalPost: React.FC<Prop> = ({ description, postId, initTop, initLeft }) => {
+const NormalPost: React.FC<Prop> = ({ description, postId, initTop, initLeft, width, height }) => {
     return (
         <DragItem initTop={initTop} initLeft={initLeft} offsetX={300}>
-            <Postit postId={postId}>
+            <Postit postId={postId} width={width} height={height}>
                 <normalPost.Description>
                     {description}
                 </normalPost.Description>

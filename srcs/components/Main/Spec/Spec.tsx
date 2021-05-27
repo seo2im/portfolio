@@ -13,7 +13,7 @@ const Spec: React.FC<Prop> = ({ title, srcs, postId, initTop, initLeft }) => {
     return (
         <DragItem initTop={initTop} initLeft={initLeft} offsetX={300}>
             <Postit postId={postId}>
-                <Title size={'large'} title={title} />
+                <Title size={'middle'} title={title} />
                 <ImageGrid height={80} srcs={srcs} color={'black'}/>
             </Postit>
         </DragItem>

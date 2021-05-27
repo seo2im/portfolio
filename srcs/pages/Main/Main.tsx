@@ -10,15 +10,12 @@ const Main: React.FC<Props> = ({ setPage }) => {
     return (
         <main.Layout>
             <Background src={config.main.background}
-                top={-10} left={-250}
-                width={'110%'} height={'110%'}/> 
+                left={-50} top={15}
+                width={'103%'} height={'95%'}/> 
             <main.Section>
-                <Spec {...config.main.backSpec}/>
-                <Spec {...config.main.frontSpec}/>
                 {config.main.introduces.map((introduce, i) => (
                     <NormalPost key={`intro_${i}`} {...introduce} />
                 ))}
-                <Goto setPage={setPage} />
             </main.Section>
         </main.Layout>
     )
