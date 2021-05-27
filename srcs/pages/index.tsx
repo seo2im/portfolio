@@ -1,13 +1,16 @@
 import React from 'react'
 import Project from './Project/Project'
 import styled from 'styled-components'
+import Main from './Main/Main'
+import Projects from './Projects/Projects'
 import { Nav, Background } from '../components'
 import config from '../../configuration'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import usePage from './usePage'
+import { usePage } from '../hooks'
 
 const Lobby: React.FC = () => {
-    const [page, changePage, idx, setIdx, isOut] = usePage()
+    const pages = [<Main key={'main'} />, <Projects key={'projects'} />]
+    const [page, changePage, idx, setIdx, isOut] = usePage(pages)
 
     return (
         <layout.Grid>
@@ -15,7 +18,10 @@ const Lobby: React.FC = () => {
             <layout.Left>
                 <Nav contents={config.nav.contents} page={idx} setPage={setIdx}/>
             </layout.Left>
-            <layout.Section isOut={isOut} onTransitionEnd={() => changePage(idx)}>
+            <layout.Section isOut={isOut} onTransitionEnd={e => {
+                    e.stopPropagation()
+                    changePage(idx)
+                }}>
                 {page}
             </layout.Section>
         </layout.Grid>

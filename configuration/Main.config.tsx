@@ -2,65 +2,100 @@ import source from '../public'
 
 const main = {
     background: source.public.board,
+    profile: {
+        photo: '',
+        name: '임성연',
+        birth: '1994.03.22',
+        email: 'seo2im6492@gmail.com',
+        link: {
+            srcs: source.public.gitlogo,
+            text: 'go to Github!',
+        },
+    },
     introduces:
     [
         {
             description: '좋은 코드는 재사용성이 높게 구조화된 코드라 생각하고 \
                 언제나 코드의 재사용성을 높이기 위해 노력합니다.',
+            
             postId: 0,
             initTop: 100,
-            initLeft: 900,
+            initLeft: -150,
             width: 400,
             height: 200,
+            dirX: -1000,
+            dirY: -500,
+            duration: 0.5,
         },
         {
             description: '협업에서 불필요한 프로세스를 개선하고 \
                 효율적인 워크플로우를 만드는 것을 좋아합니다. \
                 적극적인 소통과 가이드를 통한 개발 프로세스를 구조화하려 노력합니다.',
+            
             postId: 1,
-            initTop: 350,
-            initLeft: 900,
+            initTop: 200,
+            initLeft: 100,
             width: 400,
             height: 200,
+            dirX: 0,
+            dirY: -500,
+            duration: 0.5,
+            delay: 0.3,
         },
         {
             description: '새로운 기술을 익히는 것 뿐만 아니라 레거시한 기술또한 중요하게 생각합니다. \
                 항상 만들고 있는 코드를 이해하고 적용하려 노력합니다.',
             postId: 2,
-            initTop: 650,
-            initLeft: 900,
+            initTop: 400,
+            initLeft: -100,
             width: 400,
             height: 200,
+            dirX: 200,
+            dirY: -500,
+            duration: 0.5,
+            delay: 0.4,
         }
     ],
-    frontSpec: {
-        title: 'front SKILL',
-        srcs:
-        [
-            source.spec.js,
-            source.spec.ts,
-            source.spec.react,
-            source.spec.reactNative,
-            source.spec.redux,
-            source.spec.next,
-        ],
-        postId: 1,
-        initTop: 100,
-        initLeft: 50,
-    },
-    backSpec: {
-        title: 'etc SKILL',
-        srcs:
-        [
-            source.spec.express,
-            source.spec.mongo,
-            source.spec.gql,
-            source.spec.apollo,
-        ],
-        postId: 4,
-        initTop: 100,
-        initLeft: 50,
-    },
+    specs: [
+        {
+            title: 'front SKILL',
+            srcs:
+            [
+                source.spec.js,
+                source.spec.ts,
+                source.spec.react,
+                source.spec.reactNative,
+                source.spec.redux,
+                source.spec.next,
+            ],
+            postId: 1,
+            initTop: 590,
+            initLeft: -90,
+            width: 300,
+            height: 300,
+            duration: 0.5,
+            delay: 0.5,
+        },
+        {
+            title: 'etc SKILL',
+            srcs:
+            [
+                source.spec.express,
+                source.spec.mongo,
+                source.spec.gql,
+                source.spec.apollo,
+            ],
+            postId: 4,
+            initTop: 550,
+            initLeft: 310,
+            width: 300,
+            height: 300,
+            dirX: -200,
+            dirY: 500,
+            duration: 0.5,
+            delay: 0.7,
+        },
+    ],
     career: {
         title: '경력',
         careers: [{

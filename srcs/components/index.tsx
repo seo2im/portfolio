@@ -9,6 +9,7 @@ export { default as Canvas } from './publics/Canvas/Canvas'
 export { default as DragItem } from './publics/Dragable/DragItem'
 export { default as ImageGrid } from './publics/ImageGrid/ImageGrid'
 export { default as Postit } from './publics/Postit/Postit'
+export { default as OutInAnim } from './publics/OutInAim/OutInAnim'
 /*
     Main
 */
@@ -16,8 +17,8 @@ export { default as Title } from './Main/Title/Title'
 export { default as Career } from './Main/Career/Career'
 export { default as Description } from './Main/Description/Description'
 export { default as Spec } from './Main/Spec/Spec'
-export { default as Goto } from './Main/Goto/Goto'
 export { default as NormalPost } from './Main/NormalPost/NormalPost'
+export { default as Profile } from './Main/Profile/Profile'
 /*
     Projects
 */

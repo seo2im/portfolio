@@ -21,10 +21,9 @@ type Props = {
 
 const Carrousel: React.FC<Props> = ({ projects, width }) => {
     const [idx, move, duration, transitionEnd, isMove, items]  = useCarrousel(500, projects, 2)
-    const load = useLoad()
 
     return (
-        <carrousel.Layout width={width} load={load}>
+        <carrousel.Layout width={width}>
             <carrousel.Slide width={width} num={projects.length + 4} idx={idx} duration={duration} onTransitionEnd={transitionEnd}>
                 {items.map((project, i) => (
                     <carrousel.Content key={`carrosel_${i}`} width={width}>
