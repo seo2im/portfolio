@@ -16,12 +16,6 @@ export const Left = styled.div`
 
     margin-top: 5rem;
 `
-export const SpecWrapper = styled.div`
-    
-`
-export const IntroWrapper = styled.div`
-
-`
 export const Wrapper = styled.div<{ isOut: boolean }>`
     transition: transform 0.5s;
     transform: translate(${({ isOut }) => isOut ? '1700px, 0' : '0, 0'});

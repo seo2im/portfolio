@@ -12,15 +12,15 @@ export const Intro = styled.div`
 export const Photo = styled.img`
     display: block;
 
-    width: 300px;
-    height: 460px;
+    width: 200px;
+    height: 350px;
 `
 export const Info = styled.div`
     padding: 2rem 1.5rem;
     color: white;
 `
 export const Name = styled.div`
-    font-size: 5rem;
+    font-size: 3rem;
     
     margin-bottom: 2rem;
 `

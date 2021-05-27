@@ -4,11 +4,10 @@ import config from '../../../../configuration'
 import { Link } from '../..'
 
 type Prop = {
-    setIdx: (idx: number) => void
-    idx: number
+    
 }
-const Profile: React.FC<Prop> = ({ setIdx, idx }) => {
-    const { photo, name, birth, email, page } = config.main.profile
+const Profile: React.FC<Prop> = () => {
+    const { photo, name, birth, email, link } = config.main.profile
 
     return (
         <profile.Layout>
@@ -20,8 +19,8 @@ const Profile: React.FC<Prop> = ({ setIdx, idx }) => {
                         <profile.subInfoText>{birth}</profile.subInfoText>
                         <profile.subInfoText>{email}</profile.subInfoText>                
                     </profile.subInfo>
-                    <Link {...page} 
-                        linker={() => setIdx(1 - idx)} /> 
+                    <Link {...link} 
+                        linker={() => window.location.href = "https://github.com/seo2im"} /> 
                 </profile.Info>
             </profile.Intro>
             <profile.History>

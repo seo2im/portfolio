@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import * as main from './Main.style'
 import { Background, NormalPost, Profile, Spec } from '../../components'
 import config from '../../../configuration'
 
 const Main: React.FC = () => {    
-    const [idx, setIdx] = useState<number>(0)
-
     return (
         <main.Layout>
             <Background src={config.main.background}
@@ -15,13 +13,13 @@ const Main: React.FC = () => {
                 {"Dragable PostIt!!"}
             </main.BoardText>
             <main.Left>
-                <Profile setIdx={setIdx} idx={idx}/>
+                <Profile />
             </main.Left>
-            {config.main.specs.map((spec, i) => (
-                <Spec key={`spec_${i}`} {...spec} />
-            ))}
             {config.main.introduces.map((introduce, i) => (
                 <NormalPost key={`intro_${i}`} {...introduce} />
+            ))}
+            {config.main.specs.map((spec, i) => (
+                <Spec key={`spec_${i}`} {...spec} />
             ))}
         </main.Layout>
     )

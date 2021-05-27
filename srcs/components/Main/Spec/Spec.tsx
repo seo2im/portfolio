@@ -9,16 +9,22 @@ type Prop = {
     postId: number
     initTop: number
     initLeft: number
+    width?: number
+    height?: number
+    dirX?: number
+    dirY?: number
+    duration?: number
+    delay?: number
 }
-const Spec: React.FC<Prop> = ({ title, srcs, postId, initTop, initLeft }) => {
+const Spec: React.FC<Prop> = ({ title, srcs, postId, initTop, initLeft, width, height, dirX, dirY, duration, delay }) => {
     const load = useLoad()
     
     return (      
-        <OutInAnim dirX={2000} dirY={0} flag={load}>
+        <OutInAnim dirX={dirX} dirY={dirY} flag={load} duration={duration} delay={delay}>
             <DragItem initTop={initTop} initLeft={initLeft} offsetX={1200}>
-                <Postit postId={postId}>
+                <Postit postId={postId} width={width} height={height}>
                     <Title size={'middle'} title={title} />
-                    <ImageGrid height={80} srcs={srcs} color={'black'}/>
+                    <ImageGrid height={50} srcs={srcs} color={'white'}/>
                 </Postit>
             </DragItem>
         </OutInAnim>

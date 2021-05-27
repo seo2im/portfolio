@@ -11,12 +11,16 @@ type Prop = {
     initLeft: number
     width?: number
     height?: number
+    dirX?: number
+    dirY?: number
+    duration?: number
+    delay?: number
 }
-const NormalPost: React.FC<Prop> = ({ description, postId, initTop, initLeft ,width, height }) => {
+const NormalPost: React.FC<Prop> = ({ description, postId, initTop, initLeft ,width, height, dirX, dirY, duration, delay }) => {
     const load = useLoad()
 
     return (
-        <OutInAnim flag={load} dirX={2000} dirY={0} >
+        <OutInAnim flag={load} dirX={dirX} dirY={dirY} duration={duration} delay={delay}>
             <DragItem initTop={initTop} initLeft={initLeft} offsetX={1200}>
                 <Postit postId={postId} width={width} height={height}>
                     <normalPost.Description>
