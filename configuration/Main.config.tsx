@@ -18,7 +18,7 @@ const main = {
             {
                 contents: 'Javascript, Typescript를 통한 다양한 프론트엔드(vanila, react, react native, next) 구현 경험',
                 postId: 0,
-                initTop: 100,
+                initTop: 0,
                 initLeft: -150,
                 width: 400,
                 height: 200,
@@ -29,7 +29,7 @@ const main = {
             {
                 contents: '프론트 뿐만 아닌 Js, Ts서버 프레임워크(express, node, koa, apollo server)를 통한 서버 구현 경험',
                 postId: 0,
-                initTop: 100,
+                initTop: 0,
                 initLeft: -150,
                 width: 400,
                 height: 200,

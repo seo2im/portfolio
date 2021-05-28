@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Layout = styled.div`
     display: flex;
 
-    width: 20rem;
+    min-width: 250px;
 
     border-radius: 1rem;
 
@@ -26,5 +26,6 @@ export const Logo = styled.img`
     margin: 1rem;
 `
 export const Text = styled.div`
+    font-family: TmoneyRoundWindExtraBold;
     margin: auto;
 `

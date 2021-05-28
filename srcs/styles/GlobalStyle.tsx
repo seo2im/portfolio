@@ -2,14 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
-        font-family: 'TmoneyRoundWindExtraBold';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+        font-family: 'Nanum Pen Script', 'Nanum Gothic';
     }
 
     body {
-        font-family: 'TmoneyRoundWindExtraBold';
+        font-family: 'Nanum Gothic';
+        font-weight: 700;
         margin: 0;
         padding: 0;
         user-select: none;

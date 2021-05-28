@@ -19,13 +19,18 @@ export const Info = styled.div`
     padding: 2rem 1.5rem;
     color: white;
 `
+export const Sub = styled.div`
+    font-size: 1rem;
+`
 export const Name = styled.div`
-    font-size: 3rem;
+    font-weight: 900;
+    font-size: 2.5rem;
     
     margin-bottom: 2rem;
 `
 export const subInfo = styled.div`
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
 
     margin-bottom: 3rem;
 `

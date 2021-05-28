@@ -14,6 +14,7 @@ const Profile: React.FC<Prop> = () => {
             <profile.Intro>
                 <profile.Photo src={photo}/>
                 <profile.Info>
+                    <profile.Sub>주니어 개발자</profile.Sub>
                     <profile.Name>{name}</profile.Name>
                     <profile.subInfo>
                         <profile.subInfoText>{birth}</profile.subInfoText>
@@ -23,9 +24,6 @@ const Profile: React.FC<Prop> = () => {
                         linker={() => window.location.href = "https://github.com/seo2im"} /> 
                 </profile.Info>
             </profile.Intro>
-            <profile.History>
-
-            </profile.History>
         </profile.Layout>
     )
 }

@@ -20,7 +20,6 @@ import reduxSaga from './reduxSaga.png'
 import axios from './axios.png'
 import d3 from './d3.png'
 
-
 export default {
     public: { gitlogo, logo, board, },
     spec: {
@@ -30,5 +29,5 @@ export default {
     },
     projects: {
         bler, matching42, static42,
-    }
+    },
 }
