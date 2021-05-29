@@ -11,6 +11,7 @@ const Introduce: React.FC<Prop> = () => {
             {config.main.introduce.map((paragrah, i) =>(
                 <style.Paragraph key={`intro_${i}`}>
                     <style.Title>{paragrah.title}</style.Title>
+                    <style.Underline>{paragrah.import}</style.Underline>
                     {paragrah.description}
                 </style.Paragraph>
             ))}
