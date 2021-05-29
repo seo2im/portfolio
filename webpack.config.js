@@ -10,6 +10,7 @@ module.exports = {
         filename: '[name].bundle.js',
         chunkFilename: '[name].bundle.js',
         path: path.join(__dirname, '/build'),
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.js', '.ts', '.tsx']
