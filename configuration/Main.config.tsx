@@ -96,7 +96,38 @@ const main = {
         }
     ],
     eduHistory: {
-        
+        title: '학력 및 교육',
+        histories:
+        [
+            {
+                content: '고려대학교 산업경영공학부',
+                term: '2013.3 ~ 2021.2',
+                remark: '졸업 예정',
+            },
+            {
+                content: '고려대학교 소프트웨어 벤처 융합전공',
+                term: '2017.3 ~ 2021.2',
+                remark: '졸업 예정',
+            },
+            {
+                content: '네이버 부스트 캠프',
+                term: '2019.7 ~ 2019.8',
+                remark: '웹 풀스택 교육 1차 수료',
+            },
+            {
+                content: '42 Seoul Innovation academy',
+                term: '2020.2 ~',
+                remark: '42 seoul 본과정 진행 중',
+            }
+        ],
+        postId: 4,
+        initTop: 0,
+        initLeft: 0,
+        width: 900,
+        height: 500,
+        dirX: 1500,
+        dirY: 600,
+        duration: 0.5,
     },
     skillSet: {
         explain: {
@@ -340,7 +371,7 @@ const main = {
             initLeft: 0,
             width: 800,
             height: 700,
-            dirX: 1000,
+            dirX: 2000,
             dirY: 500,
             duration: 0.5,
         },

@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react'
 import * as main from './Main.style'
 import { Background, Profile, CoreAbility, History, CoreProject, MainNav, Introduce, SkillSet } from '../../components'
 import config from '../../../configuration'
+import EduHistory from '../../components/Main/EduHistory/EduHistory'
 
 const Main: React.FC = () => {
     const [idx, setIdx] = useState<number>(-1)
     const [projectIdx, setProjectIdx] = useState<number>(-1)
     useEffect(() => {
-        setIdx(0)
+        setIdx(1)
     }, [])
 
     return (
@@ -26,6 +27,7 @@ const Main: React.FC = () => {
                     </main.BottomLeft>
                     <main.BottomRight>
                         <CoreAbility flag={idx === 0} />
+                        <EduHistory flag={idx === 1} />
                         <SkillSet flag={idx === 2} />
                         <History flag={idx === 3} />
                     <CoreProject projectIdx={projectIdx}/>
