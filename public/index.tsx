@@ -1,6 +1,8 @@
 import gitlogo from './git.png'
 import logo from './logo.png'
 import board from './board.png'
+import figma from './figma.png'
+import notion from './notion.png'
 
 import bler from './projects/bler'
 import matching42 from './projects/matching42'
@@ -21,7 +23,7 @@ import axios from './axios.png'
 import d3 from './d3.png'
 
 export default {
-    public: { gitlogo, logo, board, },
+    public: { gitlogo, logo, board, figma, notion},
     spec: {
         apollo, express, gql, js,
         mongo, next, react, reactNative, redux,

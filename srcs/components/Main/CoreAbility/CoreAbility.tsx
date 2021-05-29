@@ -1,18 +1,16 @@
 import React from 'react'
 import * as coreAbility from './CoreAbility.style'
 import config from '../../../../configuration'
-import MyPostit from '../MyPostit/MyPostit'
+import { MyPostit } from '../../'
 
 type Prop = {
-    idx: number
+    flag: boolean
 }
-const CoreAbility: React.FC<Prop> = ({ idx }) => {
-    const { postits } = config.main.coreAbility
-
+const CoreAbility: React.FC<Prop> = ({ flag }) => {
     return (
         <>
-        {postits.map((postit, i) => (
-            <MyPostit key={`coreAb_${i}`} {...postit} flag={idx === 0}>
+        {config.main.coreAbility.map((postit, i) => (
+            <MyPostit key={`coreAb_${i}`} {...postit} flag={flag}>
                 <coreAbility.Contents>
                     {postit.contents}
                 </coreAbility.Contents>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import * as main from './Main.style'
-import { Background, Profile, CoreAbility } from '../../components'
+import { Background, Profile, CoreAbility, History, CoreProject, MainNav } from '../../components'
 import config from '../../../configuration'
+import Skillset from '../../components/Main/SkillSet/SkillSet'
 
 const Main: React.FC = () => {
     const [idx, setIdx] = useState<number>(-1)
+    const [projectIdx, setProjectIdx] = useState<number>(-1)
     useEffect(() => {
-        setIdx(0)
+        setIdx(4)
     }, [])
 
     return (
@@ -15,16 +17,7 @@ const Main: React.FC = () => {
                 left={-50} top={15}
                 width={'1650px'} height={'940px'}/>
             <main.Section>
-                <main.Nav>
-                    {config.main.nav.map((item, i) => (
-                        <main.NavItem
-                            key={`main_nav_${i}`}
-                            isSelect={idx === i}
-                            onClick={() => setIdx(i)}>
-                            {item}
-                        </main.NavItem>
-                    ))}
-                </main.Nav>
+                <MainNav idx={idx} setIdx={setIdx} projectIdx={projectIdx} setProjectIdx={setProjectIdx}/>
                 <main.BoardText>
                     {"Dragable PostIt!!"}
                 </main.BoardText>
@@ -33,7 +26,10 @@ const Main: React.FC = () => {
                         <Profile />
                     </main.BottomLeft>
                     <main.BottomRight>
-                        <CoreAbility idx={idx} />
+                        <CoreAbility flag={idx === 0} />
+                        <Skillset flag={idx === 2} />
+                        <History flag={idx === 3} />
+                        <CoreProject projectIdx={projectIdx}/>
                         </main.BottomRight>
                     </main.Bottom>
                 </main.Section>

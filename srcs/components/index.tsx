@@ -17,6 +17,10 @@ export { default as Title } from './Main/Title/Title'
 export { default as MyPostit } from './Main/MyPostit/MyPostit'
 export { default as Profile } from './Main/Profile/Profile'
 export { default as CoreAbility } from './Main/CoreAbility/CoreAbility'
+export { default as SkillSet } from './Main/SkillSet/SkillSet'
+export { default as History } from './Main/History/History'
+export { default as CoreProject } from './Main/CoreProject/CoreProject'
+export { default as MainNav } from './Main/Nav/Nav'
 /*
     Projects
 */
