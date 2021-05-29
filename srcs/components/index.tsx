@@ -21,6 +21,7 @@ export { default as SkillSet } from './Main/SkillSet/SkillSet'
 export { default as History } from './Main/History/History'
 export { default as CoreProject } from './Main/CoreProject/CoreProject'
 export { default as MainNav } from './Main/Nav/Nav'
+export { default as Introduce } from './Main/Introduce/Introduce'
 /*
     Projects
 */

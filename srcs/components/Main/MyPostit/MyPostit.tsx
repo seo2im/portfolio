@@ -19,7 +19,7 @@ const MyPostit: React.FC<Prop> = ({ children, postId, initTop, initLeft, width, 
 
     return (
         <OutInAnim dirX={dirX} dirY={dirY} flag={flag !== undefined? flag : load} duration={duration} delay={delay}>
-            <DragItem initTop={initTop} initLeft={initLeft} offsetX={1250} offsetY={166}>
+            <DragItem initTop={initTop} initLeft={initLeft} offsetX={960} offsetY={190}>
                 <Postit postId={postId} width={width} height={height}>
                     {children}
                 </Postit>

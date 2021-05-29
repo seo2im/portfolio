@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
 export const Layout = styled.div`
-    position: absolute;
-    top: 100px;
-    left: 100px;
+    margin-left: 50px;
 `
 export const Intro = styled.div`
     display: flex;

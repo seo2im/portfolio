@@ -20,13 +20,12 @@ export const Bottom = styled.div`
 `
 
 export const BottomLeft = styled.div`
-    height: 75vh;
-    width: 900px;
-
+    position: relative;
+    
     margin-top: 5rem;
 `
 export const BottomRight = styled.div`
-    
+    padding: 30px;
 `
 export const Wrapper = styled.div<{ isOut: boolean }>`
     transition: transform 0.5s;
