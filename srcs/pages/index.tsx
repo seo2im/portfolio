@@ -30,7 +30,7 @@ const Lobby: React.FC = () => {
 
 const Root: React.FC = () => {
     return (
-        <Router>
+        <Router basename={window.location.pathname || ''}>
             <Switch>
                 <Route exact path='/' component={Lobby} />
                 <Route path='/project/:id' component={Project}/>
