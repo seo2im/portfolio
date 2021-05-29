@@ -63,7 +63,7 @@ export const ContentWrapper = styled.div`
 
     padding: 20px 20px;
 
-    background: grey;
+    background: #f0f0f0;
 `
 export const Content = styled.div`
     margin: 30px 0;

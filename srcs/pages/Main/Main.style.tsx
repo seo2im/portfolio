@@ -6,6 +6,11 @@ import styled from 'styled-components'
 export const Layout = styled.div`
     position: relative;
     color: white;
+
+    width: 100vw;
+    height: 100vh;
+    
+    overflow: hidden;
 `
 export const Section = styled.div`
     position: absolute;

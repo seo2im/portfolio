@@ -49,7 +49,6 @@ const main = {
             dirX: -1000,
             dirY: -1000,
             duration: 0.5,
-            delay: 0.5,
         },
         {
             contents: '프론트 뿐만 아닌 Js, Ts서버 프레임워크(express, node, koa, apollo server)를 통한 서버 구현 경험',
@@ -61,7 +60,6 @@ const main = {
             dirX: 1000,
             dirY: -300,
             duration: 0.5,
-            delay: 0.5,
         },
         {
             contents: 'Github의 형상관리와 프로젝트 관리를 이용한 팀 작업 주도 경험',
@@ -73,7 +71,6 @@ const main = {
             dirX: 1800,
             dirY: 100,
             duration: 0.5,
-            delay: 0.5,
         },
         {
             contents: '프론트 개발 환경을 항상 직접 구축하여(webpack, babel, eslint, tsconfig) 개발환경을 구축한 경험',
@@ -85,7 +82,6 @@ const main = {
             dirX: 1000,
             dirY: 300,
             duration: 0.5,
-            delay: 0.5,
         },
         {
             contents: '다양한 개발과 언어를 접하면서 언어와 개발 자체에 익숙함(python tensorflow, C# unity, java android)',
@@ -97,7 +93,6 @@ const main = {
             dirX: -1000,
             dirY: 600,
             duration: 0.5,
-            delay: 0.5,
         }
     ],
     eduHistory: {
