@@ -17,5 +17,6 @@ export const Title = styled.div`
     line-height: 35px;
 `
 export const Underline = styled.span`
-    text-decoration 'underline'
+    text-decoration: underline;
+    font-weight: 900;
 `
