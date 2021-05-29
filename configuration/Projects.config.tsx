@@ -14,10 +14,10 @@ const projects = [
         color: '#adeef1',
         git: 'https://github.com/seo2im/BLER-APP',
         gifs: [{
-            src: source.projects.bler.signin,
+            src: '',//source.projects.bler.signin,
             height: '40rem',
         },{
-            src: source.projects.bler.show,
+            src: '',//source.projects.bler.show,
             height: '40rem',
         }],
         content: {
@@ -69,7 +69,7 @@ const projects = [
         title: 'Matching 42',
         description: '42 seoul 내 동료학습을 권장하기 위한 매칭 앱 개발',
         img: {
-            src: source.projects.matching42.check,
+            src: '',//source.projects.matching42.check,
             height: '70%',
             top: '150px',
             left: '0px',
@@ -151,7 +151,7 @@ const projects = [
         title: 'Static 42',
         description: '42 Seoul의 각종 통계정보를 그릴 수 있는 opensource 플랫폼 제작',
         img: {
-            src: source.projects.static42.numOfCadet,
+            src: '',//source.projects.static42.numOfCadet,
             height: '100%',
             top: '10px',
             left: '20px',

@@ -403,7 +403,7 @@ const main = {
                     link: 'https://www.figma.com/file/cuPZrge865KC09VZLlxreB/42Matching?node-id=0%3A1',
                 }
             ],
-            srcs: [ source.projects.matching42.show ],
+            srcs: [ ''],//source.projects.matching42.show ],
             specs: [
                 source.spec.js,
                 source.spec.react,
@@ -434,7 +434,7 @@ const main = {
                     link: 'https://github.com/seo2im/42Static',
                 },
             ],
-            srcs: [ source.projects.static42.show ],
+            srcs: [ ''],//source.projects.static42.show ],
             specs: [
                 source.spec.ts,
                 source.spec.express,
@@ -463,7 +463,7 @@ const main = {
                     link: 'https://github.com/seo2im/BLER-APP',
                 },
             ],
-            srcs: [ source.projects.bler.signin, source.projects.bler.show ],
+            srcs: [ ''],//source.projects.bler.signin, source.projects.bler.show ],
             specs: [
                 source.spec.ts,
                 source.spec.reactNative,
