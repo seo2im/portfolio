@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Theme, GlobalStyle } from './styles'
 import { ThemeProvider } from 'styled-components'
 import Root from './pages'
-import helmet, { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 const App: React.FC = () => {
     return (

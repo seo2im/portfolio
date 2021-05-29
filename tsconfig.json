@@ -3,7 +3,8 @@
     
     "target": "es6",
     "jsx": "react",       
-    "module": "commonjs", 
+    "module": "esnext", 
+    "moduleResolution": "node",
     
     "strict": true,       
     
@@ -16,7 +17,7 @@
     "forceConsistentCasingInFileNames": true,       
     
     "preserveConstEnums": true,
-    "removeComments": true,
+    "removeComments": false,
     "sourceMap": true,
     "typeRoots": ["/node_modules/@types", "./@types"]
       
