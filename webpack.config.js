@@ -10,7 +10,6 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.join(__dirname, '/docs'),
-        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.ts', '.tsx']
