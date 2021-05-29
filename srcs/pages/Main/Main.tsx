@@ -14,8 +14,8 @@ const Main: React.FC = () => {
     return (
         <main.Layout>
             <Background src={config.main.background}
-                left={-50} top={15}
-                width={'1650px'} height={'940px'}/>
+                left={0} top={0}
+                width={'1600px'} height={'900px'}/>
             <main.Section>
                 <MainNav idx={idx} setIdx={setIdx} projectIdx={projectIdx} setProjectIdx={setProjectIdx}/>
                 <main.BoardText>

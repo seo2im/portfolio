@@ -30,7 +30,7 @@ const Lobby: React.FC = () => {
 
 const Root: React.FC = () => {
     return (
-        <Router>
+        <Router basename={window.location.pathname || ''}>
             <Switch>
                 <Route exact path='/' component={Lobby} />
                 <Route path='/project/:id' component={Project}/>
@@ -44,14 +44,15 @@ export default Root
 const layout = {
     Grid: styled.div`
         display: flex;
+
+        overflow: hidden;
     `,
     Left : styled.div`
-        width: 300px;
+        width: 250px;
         z-index: 99;
     `,
     Section: styled.div<{ isOut: boolean }>`
-        width: calc(100% - 20rem);
-
+        width: calc(100% - 250px);
         transition: transform 1s;
         transform: translate(${({ isOut }) => isOut ? '1700px, 0' : '0, 0'});
     `
