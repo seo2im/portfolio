@@ -5,16 +5,32 @@ import styled from 'styled-components'
 */
 export const Layout = styled.div`
     position: relative;
-    
     color: white;
+
+    width: 100vw;
+    height: 100vh;
     
+    overflow: hidden;
+`
+export const Section = styled.div`
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    height: 870px;
+    width: 1477px;
+`
+export const Bottom = styled.div`
     display: flex;
 `
-export const Left = styled.div`
-    height: 75vh;
-    width: 900px;
 
+export const BottomLeft = styled.div`
+    position: relative;
+    
     margin-top: 5rem;
+`
+export const BottomRight = styled.div`
+    padding: 30px;
 `
 export const Wrapper = styled.div<{ isOut: boolean }>`
     transition: transform 0.5s;

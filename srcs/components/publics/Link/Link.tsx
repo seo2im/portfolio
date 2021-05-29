@@ -3,7 +3,7 @@ import * as link from './Link.style'
 
 type Props = {
     srcs: any
-    text: string
+    text?: string
     linker: () => void
 }
 const Link: React.FC<Props> = ({ srcs, text, linker }) => {
