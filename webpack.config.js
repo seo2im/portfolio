@@ -22,7 +22,7 @@ module.exports = {
                 loader: 'awesome-typescript-loader',
             },
             {
-                test: /\.(png|svg|gif)$/,
+                test: /\.(png|svg|gif|ttf)$/,
                 loader: 'url-loader'
             }
         ]

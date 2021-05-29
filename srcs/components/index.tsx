@@ -14,11 +14,14 @@ export { default as OutInAnim } from './publics/OutInAim/OutInAnim'
     Main
 */
 export { default as Title } from './Main/Title/Title'
-export { default as Career } from './Main/Career/Career'
-export { default as Description } from './Main/Description/Description'
-export { default as Spec } from './Main/Spec/Spec'
-export { default as NormalPost } from './Main/NormalPost/NormalPost'
+export { default as MyPostit } from './Main/MyPostit/MyPostit'
 export { default as Profile } from './Main/Profile/Profile'
+export { default as CoreAbility } from './Main/CoreAbility/CoreAbility'
+export { default as SkillSet } from './Main/SkillSet/SkillSet'
+export { default as History } from './Main/History/History'
+export { default as CoreProject } from './Main/CoreProject/CoreProject'
+export { default as MainNav } from './Main/Nav/Nav'
+export { default as Introduce } from './Main/Introduce/Introduce'
 /*
     Projects
 */
