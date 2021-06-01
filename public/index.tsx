@@ -3,10 +3,12 @@ import logo from './logo.png'
 import board from './board.png'
 import figma from './figma.png'
 import notion from './notion.png'
+import profile from './profile.png'
 
 import bler from './projects/bler'
 import matching42 from './projects/matching42'
 import static42 from './projects/static42'
+import portfolio from './projects/portfolio'
 
 import apollo from './apollo.png'
 import express from './express.png'
@@ -23,13 +25,13 @@ import axios from './axios.png'
 import d3 from './d3.png'
 
 export default {
-    public: { gitlogo, logo, board, figma, notion},
+    public: { gitlogo, logo, board, figma, notion, profile, },
     spec: {
         apollo, express, gql, js,
         mongo, next, react, reactNative, redux,
         ts, reduxSaga, axios, d3,
     },
     projects: {
-        bler, matching42, static42,
+        bler, matching42, static42, portfolio,
     },
 }

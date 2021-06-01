@@ -11,7 +11,7 @@ export const Photo = styled.img`
     display: block;
 
     width: 250px;
-    height: 350px;
+    object-fit: cover;
 `
 export const Info = styled.div`
     padding: 2rem 1.5rem;

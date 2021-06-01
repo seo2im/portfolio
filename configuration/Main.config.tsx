@@ -29,7 +29,7 @@ const main = {
         },
     ],
     profile: {
-        photo: '',
+        photo: source.public.profile,
         name: '임성연',
         birth: '1994.03.22',
         email: 'seo2im6492@gmail.com',
@@ -361,7 +361,7 @@ const main = {
                     link: 'https://www.figma.com/file/eErjt6o1PA5rxCwsaiyvdl/Portfolio-Design?node-id=0%3A1',
                 }
             ],
-            srcs: [''],
+            srcs: [ source.projects.portfolio.show ],
             specs: [
                 source.spec.ts,
                 source.spec.react,
@@ -403,7 +403,7 @@ const main = {
                     link: 'https://www.figma.com/file/cuPZrge865KC09VZLlxreB/42Matching?node-id=0%3A1',
                 }
             ],
-            srcs: [ ''],//source.projects.matching42.show ],
+            srcs: [ source.projects.matching42.show ],
             specs: [
                 source.spec.js,
                 source.spec.react,
@@ -434,7 +434,7 @@ const main = {
                     link: 'https://github.com/seo2im/42Static',
                 },
             ],
-            srcs: [ ''],//source.projects.static42.show ],
+            srcs: [ source.projects.static42.show ],
             specs: [
                 source.spec.ts,
                 source.spec.express,
@@ -463,7 +463,7 @@ const main = {
                     link: 'https://github.com/seo2im/BLER-APP',
                 },
             ],
-            srcs: [ ''],//source.projects.bler.signin, source.projects.bler.show ],
+            srcs: [ source.projects.bler.signin, source.projects.bler.show ],
             specs: [
                 source.spec.ts,
                 source.spec.reactNative,
