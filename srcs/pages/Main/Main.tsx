@@ -30,9 +30,9 @@ const Main: React.FC = () => {
                         <EduHistory flag={idx === 1} />
                         <SkillSet flag={idx === 2} />
                         <History flag={idx === 3} />
-                    <CoreProject projectIdx={projectIdx}/>
-                        <Introduce />
+                        <CoreProject projectIdx={projectIdx}/>
                     </main.BottomRight>
+                    <Introduce />
                     </main.Bottom>
                 </main.Section>
             </main.Layout>
