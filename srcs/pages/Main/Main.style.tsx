@@ -28,6 +28,8 @@ export const BottomLeft = styled.div`
     margin-top: 5rem;
 `
 export const BottomRight = styled.div`
+    z-index: 100;
+
     padding: 30px;
 `
 export const Wrapper = styled.div<{ isOut: boolean }>`

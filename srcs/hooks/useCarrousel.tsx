@@ -30,7 +30,7 @@ const useCarrousel: Fc = (time, contents, showed) => {
             setDuration(0)
             setIdx(contents.length)
         }
-        if (idx === contents.length + 1) {
+        if (idx === contents.length + showed - 1) {
             setDuration(0)
             setIdx(showed - 1)
         }
